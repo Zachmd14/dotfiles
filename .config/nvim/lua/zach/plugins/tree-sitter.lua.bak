@@ -1,0 +1,38 @@
+return {
+	'nvim-treesitter/nvim-treesitter',
+	run = ':TSUpdate',
+	config = function()
+		require 'nvim-treesitter.configs'.setup {
+			ensure_installed = { "markdown", "markdown_inline" }, -- Install markdown support
+			highlight = { enable = true },
+			indent = { enable = true },
+			fold = {
+				enable = true,
+				disable = {}, -- Specify languages to disable folding if needed
+			}
+		}
+
+		-- Custom folding function for Markdown headers
+		function MarkdownFold()
+			local line = vim.fn.getline(vim.v.lnum)
+			local header_level = vim.fn.len(vim.fn.matchstr(line, '^#*'))
+
+			if header_level > 0 then
+				return header_level
+			else
+				return 0
+			end
+		end
+
+		-- Use Tree-sitter for folding in Markdown files
+		vim.api.nvim_create_autocmd('FileType', {
+			pattern = { 'markdown', 'markdown_inline' },
+			callback = function()
+				vim.opt_local.foldmethod = 'expr'
+				vim.opt_local.foldexpr = 'v:lua.MarkdownFold()' -- Use custom folding function
+				vim.opt_local.foldenable = true             -- Enable folding by default
+				-- vim.opt_local.foldlevelstart = 99 -- Start with all folds closed (change to 1 to start open)
+			end
+		})
+	end
+}

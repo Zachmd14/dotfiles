@@ -1,0 +1,7 @@
+2024/05/30-14:56:24.643 be6 Reusing MANIFEST /home/zach/.config/obsidian/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/05/30-14:56:24.643 be6 Recovering log #3
+2024/05/30-14:56:24.643 be6 Reusing old log /home/zach/.config/obsidian/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000003.log 
+2024/05/30-14:56:27.262 be6 Level-0 table #5: started
+2024/05/30-14:56:27.267 be6 Level-0 table #5: 4874 bytes OK
+2024/05/30-14:56:27.271 be6 Delete type=0 #3
+2024/05/30-14:56:27.272 be6 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

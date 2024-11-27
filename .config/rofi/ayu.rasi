@@ -1,0 +1,78 @@
+/**
+ * Ayu Dark theme ported for rofi
+ *
+ * See man page for reference: 
+ * https://github.com/davatorium/rofi/blob/next/doc/rofi-theme.5.markdown#name-1
+ */
+
+/**
+ * Window
+ */
+
+* {
+  accentcolor: #e6b450;
+  backgroundcolor: #0a0e14f3;
+  separatorcolor: transparent;
+  foregroundcolor: #b3b1ad;
+  selectioncolor: #fafafa;
+	selectedbackgroundcolor: #cecece20;
+  
+  background-color: transparent;
+  text-color: @foregroundcolor;
+}
+
+#window {
+  font: "SF Pro Text Regular 9";
+  location: 0;
+  background-color: @backgroundcolor;
+  border-color: @accentcolor;
+  border: 1;
+  border-radius: 0;
+  padding: 16 14;
+  width: 640;
+}
+
+/**
+ * Input box
+ */
+
+#element {
+  spacing: 2;
+  padding: 8;
+}
+
+#element.selected.normal {
+  text-color: @selectioncolor;
+	background-color: @selectedbackgroundcolor;
+}
+
+#element.selected.active {
+  text-color: @selectioncolor;
+	background-color: @selectedbackgroundcolor;
+}
+
+#inputbar {
+  border: none;
+  children: [prompt, entry];
+}
+
+#prompt {
+  color: @accentcolor;
+  padding: 2 8 8;
+}
+
+#entry {
+  padding: 2 8 8;
+}
+
+/**
+ * List
+ */
+
+element-icon {
+  size: 24px;
+}
+
+element-text {
+  padding: 4;
+}

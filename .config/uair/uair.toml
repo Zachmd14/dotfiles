@@ -1,0 +1,27 @@
+[defaults]
+format = "{name} : {time}\n"
+
+[[sessions]]
+id = "work"
+name = "Work"
+duration = "50m"
+command = "notify-send 'Work Done!' && paplay ~/scripts/notification.wav && /home/zach/.local/share/pipx/venvs/telegram-send/bin/telegram-send 'Work Done!'"
+
+[[sessions]]
+id = "rest"
+name = "Rest"
+duration = "10m"
+command = "notify-send 'Rest Done!' && paplay ~/scripts/notification.wav && /home/zach/.local/share/pipx/venvs/telegram-send/bin/telegram-send 'Rest Done!'"
+
+[[sessions]]
+id = "lrest"
+name = "Light Rest"
+duration = "5m"
+command = "notify-send 'Light Rest Done!' && paplay ~/scripts/notification.wav && /home/zach/.local/share/pipx/venvs/telegram-send/bin/telegram-send 'Rest Done!'"
+
+[[sessions]]
+id = "lwork"
+name = "Light Work"
+duration = "25m"
+command = "notify-send 'Light Work Done!' && paplay ~/scripts/notification.wav && /home/zach/.local/share/pipx/venvs/telegram-send/bin/telegram-send 'Rest Done!'"
+

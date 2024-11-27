@@ -1,0 +1,147 @@
+return {
+	'nvimdev/dashboard-nvim',
+	event = 'VimEnter',
+	config = function()
+		require('dashboard').setup {
+			-- config
+			theme = 'doom',
+			config = {
+
+				mru = { limit = 5 },
+
+				header = {
+					[[                                                                       ]],
+					[[                                                                       ]],
+					[[                                                                       ]],
+					[[                                                                     ]],
+					[[       ████ ██████           █████      ██                     ]],
+					[[      ███████████             █████                             ]],
+					[[      █████████ ███████████████████ ███   ███████████   ]],
+					[[     █████████  ███    █████████████ █████ ██████████████   ]],
+					[[    █████████ ██████████ █████████ █████ █████ ████ █████   ]],
+					[[  ███████████ ███    ███ █████████ █████ █████ ████ █████  ]],
+					[[ ██████  █████████████████████ ████ █████ █████ ████ ██████ ]],
+					[[                                                                       ]],
+					[[                                                                       ]],
+					[[                                                                       ]],
+					[[                                                                       ]],
+					-- "                                   ",
+					-- "                                   ",
+					-- "                                   ",
+					-- "   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆          ",
+					-- "    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ",
+					-- "          ⠈⢿⣿⣟⠦ ⣾⣿⣿⣷    ⠻⠿⢿⣿⣧⣄     ",
+					-- "           ⣸⣿⣿⢧ ⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄    ",
+					-- "          ⢠⣿⣿⣿⠈    ⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀   ",
+					-- "   ⢠⣧⣶⣥⡤⢄ ⣸⣿⣿⠘  ⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿⠄  ",
+					-- "  ⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷   ⢊⣿⣿⡏  ⢸⣿⣿⡇ ⢀⣠⣄⣾⠄   ",
+					-- " ⣠⣿⠿⠛ ⢀⣿⣿⣷⠘⢿⣿⣦⡀ ⢸⢿⣿⣿⣄ ⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄  ",
+					-- " ⠙⠃   ⣼⣿⡟  ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿ ⣿⣿⡇ ⠛⠻⢷⣄ ",
+					-- "      ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆     ",
+					-- "       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ",
+					-- "                                   ",
+					-- [[																																			 ]],
+					-- [[																																			 ]],
+					-- [[																																			 ]],
+					-- [[																																			 ]],
+					-- [[                                                                       ]],
+					-- [[  ██████   █████                   █████   █████  ███                  ]],
+					-- [[ ░░██████ ░░███                   ░░███   ░░███  ░░░                   ]],
+					-- [[  ░███░███ ░███   ██████   ██████  ░███    ░███  ████  █████████████   ]],
+					-- [[  ░███░░███░███  ███░░███ ███░░███ ░███    ░███ ░░███ ░░███░░███░░███  ]],
+					-- [[  ░███ ░░██████ ░███████ ░███ ░███ ░░███   ███   ░███  ░███ ░███ ░███  ]],
+					-- [[  ░███  ░░█████ ░███░░░  ░███ ░███  ░░░█████░    ░███  ░███ ░███ ░███  ]],
+					-- [[  █████  ░░█████░░██████ ░░██████     ░░███      █████ █████░███ █████ ]],
+					-- [[ ░░░░░    ░░░░░  ░░░░░░   ░░░░░░       ░░░      ░░░░░ ░░░░░ ░░░ ░░░░░  ]],
+
+					[[                                                                       ]],
+					[[                                                                       ]],
+					[[                                                                       ]],
+				},
+
+				center = {
+					{
+						icon = ' ',
+						icon_hl = 'Title',
+						desc = 'Find File           ',
+						desc_hl = 'String',
+						key = 'f',
+						keymap = '',
+						key_hl = 'Number',
+						key_format = ' %s', -- remove default surrounding `[]`
+						action = ':execute "cd $PWD" | Telescope find_files'
+					},
+					{
+						icon = ' ',
+						icon_hl = 'Title',
+						desc = 'Find String           ',
+						desc_hl = 'String',
+						key = 't',
+						keymap = '',
+						key_hl = 'Number',
+						key_format = ' %s', -- remove default surrounding `[]`
+						action = ':execute "cd $PWD" | Telescope live_grep'
+					},
+					{
+						icon = ' ',
+						desc = 'Find Dotfiles',
+						key = 'c',
+						keymap = '',
+						key_format = ' %s', -- remove default surrounding `[]`
+						action = 'Telescope find_files search_dirs=~/.config/nvim/'
+					},
+					{
+						icon = ' ',
+						desc = 'Find Recent Projects',
+						key = 'r',
+						keymap = '',
+						key_format = ' %s', -- remove default surrounding `[]`
+						action = 'Telescope projects'
+					},
+					{
+						icon = ' ',
+						desc = 'Update Plugins',
+						key = 'u',
+						keymap = '',
+						key_format = ' %s', -- remove default surrounding `[]`
+						action = 'Lazy update'
+					},
+					{
+						icon = ' ',
+						desc = 'Obsidian Vault',
+						key = 'o',
+						keymap = '',
+						key_format = ' %s', -- remove default surrounding `[]`
+						action = ':execute "cd ~/Documents/Obsidian/mainVault/02 - Zettelkasten/" | Telescope find_files'
+					},
+					{
+						icon = ' ',
+						desc = 'Quit Neovim',
+						key = 'q',
+						keymap = '',
+						key_format = ' %s', -- remove default surrounding `[]`
+						action = ':q'
+					},
+
+				},
+				footer = {
+					"                                           ",
+					"                                           ",
+					"                                           ",
+					"                                           ",
+					"                                           ",
+					"                _       _     _            ",
+					"               | |     | |   | |           ",
+					"  __ _ _ __ ___| |__   | |__ | |___      __",
+					" / _` | '__/ __| '_ \\  | '_ \\| __\\ \\ /\\ / /",
+					"| (_| | | | (__| | | | | |_) | |_ \\ V  V / ",
+					" \\__,_|_|  \\___|_| |_| |_.__/ \\__| \\_/\\_/  ",
+					"                                           ",
+					"                                           "
+					-- "  Sharp tools make great work",
+				} --your footer
+			},
+
+		}
+	end
+}

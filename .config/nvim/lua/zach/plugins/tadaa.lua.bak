@@ -1,0 +1,4 @@
+return {
+	'tadaa/vimade',
+	require('lazy').setup({ spec = { 'tadaa/vimade', event = 'VeryLazy' } })
+}

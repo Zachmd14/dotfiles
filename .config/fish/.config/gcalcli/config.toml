@@ -1,0 +1,12 @@
+[DEFAULT]
+# Default settings
+time_format = "%Y-%m-%d %H:%M"
+
+[output]
+week-start = "monday"
+
+[Hobby]
+color = "red"
+
+[Routines]
+color = "green"
