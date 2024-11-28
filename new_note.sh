@@ -1,0 +1,1 @@
+scripts/new_note.sh

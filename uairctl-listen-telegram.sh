@@ -1,0 +1,1 @@
+scripts/uairctl-listen-telegram.sh

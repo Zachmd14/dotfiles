@@ -1,0 +1,1 @@
+scripts/shitpost.sh

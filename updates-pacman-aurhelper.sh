@@ -1,0 +1,1 @@
+scripts/updates-pacman-aurhelper.sh

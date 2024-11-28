@@ -1,0 +1,1 @@
+scripts/auto_commit.sh

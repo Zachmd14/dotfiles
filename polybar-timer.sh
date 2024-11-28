@@ -1,0 +1,1 @@
+scripts/polybar-timer.sh

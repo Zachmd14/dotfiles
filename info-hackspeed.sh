@@ -1,0 +1,1 @@
+scripts/info-hackspeed.sh
