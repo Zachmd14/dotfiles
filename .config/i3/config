@@ -81,6 +81,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec kitty
 bindsym $mod+w exec zen-browser
 bindsym $mod+u exec obsidian
+bindsym $mod+n exec --no-startup-id sh -c "kitty -e nvim"
 
 # Change screen layout
 bindsym $mod+Shift+s exec bash /home/zach/scripts/desk-screen-layout.sh && notify-send -t 5000 "Desk screen layout set"
