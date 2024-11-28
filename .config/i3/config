@@ -39,10 +39,9 @@ exec "xinput set-prop 14 'libinput Accel Speed' -0.37"
 exec "alternating_layouts.py"
 exec "unclutter -idle 0.5"
 exec "tlp start"
-exec "bash /usr/bin/gcalcli-remind.sh"
-# Set Caps Lock as Escape
 exec 'bash /home/zach/scripts/escape-key-bind.sh'
 exec 'xbindkeys'
+exec 'bash /home/scripts/auto_commit.sh'
 
 # exec "sudo ufw enable"
 # exec "sudo systemctl start sshd"
