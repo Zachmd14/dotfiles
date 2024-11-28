@@ -3,6 +3,12 @@ return {
 
 	opts = {
 
+		stiffness = 0.7,             -- 0.6      [0, 1]
+		trailing_stiffness = 0.35,   -- 0.3      [0, 1]
+		trailing_exponent = 0.1,     -- 0.1      >= 0
+		distance_stop_animating = 0.4, -- 0.1      > 0
+		hide_target_hack = false,    -- true     boolean
+
 		-- Cursor color. Defaults to Cursor gui color
 		cursor_color = "#a36a1a",
 
