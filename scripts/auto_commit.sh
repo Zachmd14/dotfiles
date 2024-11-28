@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the directory you want to monitor
-DIRECTORY="/home/zach/Documents/cours/GitCours/"
+DIRECTORY="/home/zach/Documents/Obsidian/"
 
 # Change to the specified directory
 cd "$DIRECTORY" || exit
