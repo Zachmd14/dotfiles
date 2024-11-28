@@ -24,6 +24,8 @@ font pango:monospace 8
 exec --no-startup-id dex --autostart --environment i3
 
 # start programs
+#unmute mic (hmmm acadomia)
+exec 'pactl set-source-mute alsa_input.pci-0000_00_1f.3.analog-stereo false'
 # launch dunst notification daemon
 exec 'killall dunst; dunst &'
 exec 'rfkill unblock wifi'
