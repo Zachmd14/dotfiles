@@ -48,7 +48,7 @@ if status is-interactive
     abbr removebg 'source ~/scripts/rm_bg/bin/activate; python ~/scripts/remove_bg.py; deactivate'
     abbr javacall 'javac *.java'
     abbr clock 'peaclock blue'
-    abbr tt 'tt -showwpm -n'
+    abbr tt 'tt -notheme -showwpm -n'
     abbr pipe 'bash /home/zach/Apps/pipes.sh/pipes.sh -t 0'
     abbr texclean 'find . -maxdepth 1 -type f ! -name "*.tex" ! -name "*.pdf" -exec rm -f {} \;'
     abbr checkra1n 'sudo ~/Apps/checkra1n'
