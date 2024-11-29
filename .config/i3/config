@@ -262,7 +262,7 @@ client.focused          #ffffff #285577 #ffffff #222222   #ffffff
 client.focused_inactive #222222 #5f676a #ffffff #222222   #222222
 client.unfocused        #222222 #222222 #888888 #222222   #222222
 client.urgent           #ffffff #900000 #ffffff #222222   #ffffff
-client.placeholder      #ffffff #0c0c0c #ffffff #222222   #222222
+client.placeholder      #ffffff #0c0c0c #ffffff #222222   #ffffff
 
 # client.background       #ffffff
 #
