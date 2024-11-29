@@ -30,6 +30,7 @@ return {
 			vim.keymap.set('n', '<leader>oq', ':ObsidianQuickSwitch<CR>', {}),
 			vim.keymap.set('n', '<leader>ot', ':ObsidianTOC<CR>', {}),
 			vim.keymap.set('n', '<leader>og', ':ObsidianTags<CR>', {}),
+			vim.keymap.set('n', '<leader>od', ':ObsidianToday<CR>', {}),
 
 			vim.keymap.set('n', '<leader>on', function()
 				local title = vim.fn.input('Enter note title: ')
@@ -64,7 +65,27 @@ return {
 		new_notes_location = "current_dir",
 		attachments = {
 			img_folder = "~/Documents/Obsidian/mainVault/98 - Files/",
-		}
+		},
 
+		daily_notes = {
+			-- Optional, if you keep daily notes in a separate directory.
+			folder = "01 - Daily Notes",
+			-- Optional, if you want to change the date format for the ID of daily notes.
+			date_format = "%Y-%m-%d",
+			-- Optional, if you want to change the date format of the default alias of daily notes.
+			alias_format = "%B %-d, %Y",
+			-- Optional, default tags to add to each new daily note created.
+			default_tags = { "daily-notes" },
+			-- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
+			template = "Daily template"
+		},
+
+		templates = {
+			folder = "~/Documents/Obsidian/mainVault/99 -  Templates/",
+			date_format = "%Y-%m-%d",
+			time_format = "%H:%M",
+			-- A map for custom variables, the key should be the variable and the value a function
+			substitutions = {},
+		},
 	}
 }
