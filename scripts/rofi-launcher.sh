@@ -13,10 +13,6 @@ case $chosen in
     "😀 emojis")
         rofi -modi emoji -show emoji -kb-custom-1 Ctrl+c
 				;;
-    "🔌 power")
-        rofi -show power-menu -modi power-menu:rofi-power-menu
-
-        ;;
 		"📡 wifi")
 				bash /home/zach/scripts/rofi-wifi-menu.sh
 
