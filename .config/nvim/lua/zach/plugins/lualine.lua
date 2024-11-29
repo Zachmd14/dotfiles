@@ -4,6 +4,7 @@ return {
 	config = function()
 		local lualine = require("lualine")
 		local lazy_status = require("lazy.status") -- to configure lazy pending updates count
+		local prose = require("nvim-prose")
 
 		local colors = {
 			blue = "#65D1FF",
@@ -65,6 +66,8 @@ return {
 					{ "encoding" },
 					{ "fileformat" },
 					{ "filetype" },
+					{ prose.word_count,   cond = prose.is_available },
+					{ prose.reading_time, cond = prose.is_available },
 				},
 			},
 		})
