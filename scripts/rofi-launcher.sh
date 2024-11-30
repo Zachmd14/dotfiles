@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the options for the Rofi menu
-options="💻 apps\n😀 emojis\n🔌 power\n📡 wifi"
+options="💻 apps\n😀 emojis\n📡 wifi"
 
 # Use Rofi to display the options
 chosen=$(echo -e "$options" | rofi -dmenu -p "Select an option:")
@@ -15,7 +15,6 @@ case $chosen in
 				;;
 		"📡 wifi")
 				bash /home/zach/scripts/rofi-wifi-menu.sh
-
         ;;
     *)
         exit 1
