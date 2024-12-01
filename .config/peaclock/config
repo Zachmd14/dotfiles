@@ -1,0 +1,8 @@
+# Set the string value used to fill the blocks
+fill '█'
+
+# Set colors for all blocks to bright red
+color_active '#FF0000'
+color_inactive '#FF0000'
+color_colon '#FF0000'
+
