@@ -47,7 +47,7 @@ vim.api.nvim_set_keymap('n', '<C-Down>', ':resize -5<CR>', opts)
 vim.api.nvim_set_keymap('n', '<C-Up>', ':resize +5<CR>', opts)
 
 -- Set keymap for going into the current directory
-vim.api.nvim_set_keymap('n', '<Space>n', ':cd $PWD<CR>', opts)
+vim.api.nvim_set_keymap('n', '<Space>cp', ':cd $PWD<CR>', opts)
 
 -- Press Ctrl + Suppr and Ctrl + Backspace for deleting entire word in insert mode
 vim.api.nvim_set_keymap('i', '<C-BS>', '<C-W>', opts)
