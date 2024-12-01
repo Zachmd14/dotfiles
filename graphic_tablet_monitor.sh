@@ -1,1 +1,0 @@
-scripts/graphic_tablet_monitor.sh

@@ -1,1 +1,0 @@
-scripts/notification-reddit.sh

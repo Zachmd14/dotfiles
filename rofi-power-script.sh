@@ -1,1 +1,0 @@
-scripts/rofi-power-script.sh

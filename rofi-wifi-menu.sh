@@ -1,1 +1,0 @@
-scripts/rofi-wifi-menu.sh

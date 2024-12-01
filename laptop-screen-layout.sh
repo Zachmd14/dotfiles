@@ -1,1 +1,0 @@
-scripts/laptop-screen-layout.sh

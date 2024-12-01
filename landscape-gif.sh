@@ -1,1 +1,0 @@
-scripts/landscape-gif.sh
