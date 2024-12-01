@@ -81,6 +81,7 @@ if status is-interactive
 		abbr wifi 'nmtui'
 		abbr rsync 'rsync --progress'
 		abbr landscape 'bash ~/scripts/landscape-gif.sh'
+		abbr remind 'bash /home/zach/scripts/reminder.sh -t'
 end
 
 function fish_user_key_bindings
