@@ -74,7 +74,7 @@ if status is-interactive
     abbr td 'todoist-cli --color --indent'
     abbr tdday 'todoist-cli --color --indent l --filter today'
 		abbr fzf 'fzf | xclip -selection clipboard'
-		abbr fastfetch 'fastfetch --logo-type none'
+		# abbr fastfetch 'fastfetch --logo-type none'
 		abbr config '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 		abbr gpom 'git push origin main'
 		abbr gp 'sudo gopro webcam -a -r 1080 -f linear'
