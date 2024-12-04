@@ -1,10 +1,6 @@
 # test
 # ~/.config/fish/config.fish
 
-# Start the gnome keyring
-eval $(/usr/bin/gnome-keyring-daemon --start)
-export SSH_AUTH_SOCK
-
 # set caps lock as escape
 setxkbmap -option caps:escape
 
