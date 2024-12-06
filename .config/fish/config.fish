@@ -58,7 +58,6 @@ if status is-interactive
     abbr mail 'cmdg'
     abbr edex 'cd /home/zach/Apps/; ./eDEX-UI-Linux-x86_64.AppImage; cd'
     abbr yt 'ytfzf --force-youtube --upload-date=relevance -t '
-    abbr note '/home/zach/scripts/new_note.sh'
     abbr rmt 'trash'
     abbr trash-empty 'sudo trash-empty'
     abbr shitpost 'bash ~/scripts/shitpost.sh'
@@ -82,6 +81,7 @@ if status is-interactive
 		abbr rsync 'rsync --progress'
 		abbr landscape 'bash ~/scripts/landscape-gif.sh'
 		abbr remind 'bash /home/zach/scripts/reminder.sh -t'
+		abbr history 'history | fzf | xclip -selection clipboard'
 end
 
 function fish_user_key_bindings
