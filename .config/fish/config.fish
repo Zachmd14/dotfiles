@@ -19,7 +19,6 @@ set -g theme_avoid_ambiguous_glyphs yes
 set -g default_user zach
 
 # terminal startup commands
-echo 'Welcome /home/'
 # fastfetch --logo-type none
 # todoist-cli --color --indent l --filter today
 
