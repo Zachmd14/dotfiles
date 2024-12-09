@@ -3,12 +3,11 @@ return {
 	event = 'VimEnter',
 	config = function()
 		require('dashboard').setup {
-			-- config
-			theme = 'doom',
+			theme = 'hyper',
 			config = {
-
 				mru = { limit = 5 },
 
+				-- Header section with Hyper-style ASCII art
 				header = {
 					[[                                                                       ]],
 					[[                                                                       ]],
@@ -25,45 +24,27 @@ return {
 					[[                                                                       ]],
 					[[                                                                       ]],
 					[[                                                                       ]],
-					-- "                                   ",
-					-- "                                   ",
-					-- "                                   ",
-					-- "   ⣴⣶⣤⡤⠦⣤⣀⣤⠆     ⣈⣭⣿⣶⣿⣦⣼⣆          ",
-					-- "    ⠉⠻⢿⣿⠿⣿⣿⣶⣦⠤⠄⡠⢾⣿⣿⡿⠋⠉⠉⠻⣿⣿⡛⣦       ",
-					-- "          ⠈⢿⣿⣟⠦ ⣾⣿⣿⣷    ⠻⠿⢿⣿⣧⣄     ",
-					-- "           ⣸⣿⣿⢧ ⢻⠻⣿⣿⣷⣄⣀⠄⠢⣀⡀⠈⠙⠿⠄    ",
-					-- "          ⢠⣿⣿⣿⠈    ⣻⣿⣿⣿⣿⣿⣿⣿⣛⣳⣤⣀⣀   ",
-					-- "   ⢠⣧⣶⣥⡤⢄ ⣸⣿⣿⠘  ⢀⣴⣿⣿⡿⠛⣿⣿⣧⠈⢿⠿⠟⠛⠻⠿⠄  ",
-					-- "  ⣰⣿⣿⠛⠻⣿⣿⡦⢹⣿⣷   ⢊⣿⣿⡏  ⢸⣿⣿⡇ ⢀⣠⣄⣾⠄   ",
-					-- " ⣠⣿⠿⠛ ⢀⣿⣿⣷⠘⢿⣿⣦⡀ ⢸⢿⣿⣿⣄ ⣸⣿⣿⡇⣪⣿⡿⠿⣿⣷⡄  ",
-					-- " ⠙⠃   ⣼⣿⡟  ⠈⠻⣿⣿⣦⣌⡇⠻⣿⣿⣷⣿⣿⣿ ⣿⣿⡇ ⠛⠻⢷⣄ ",
-					-- "      ⢻⣿⣿⣄   ⠈⠻⣿⣿⣿⣷⣿⣿⣿⣿⣿⡟ ⠫⢿⣿⡆     ",
-					-- "       ⠻⣿⣿⣿⣿⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⢀⣀⣤⣾⡿⠃     ",
-					-- "                                   ",
-					-- [[																																			 ]],
-					-- [[																																			 ]],
-					-- [[																																			 ]],
-					-- [[																																			 ]],
-					-- [[                                                                       ]],
-					-- [[  ██████   █████                   █████   █████  ███                  ]],
-					-- [[ ░░██████ ░░███                   ░░███   ░░███  ░░░                   ]],
-					-- [[  ░███░███ ░███   ██████   ██████  ░███    ░███  ████  █████████████   ]],
-					-- [[  ░███░░███░███  ███░░███ ███░░███ ░███    ░███ ░░███ ░░███░░███░░███  ]],
-					-- [[  ░███ ░░██████ ░███████ ░███ ░███ ░░███   ███   ░███  ░███ ░███ ░███  ]],
-					-- [[  ░███  ░░█████ ░███░░░  ░███ ░███  ░░░█████░    ░███  ░███ ░███ ░███  ]],
-					-- [[  █████  ░░█████░░██████ ░░██████     ░░███      █████ █████░███ █████ ]],
-					-- [[ ░░░░░    ░░░░░  ░░░░░░   ░░░░░░       ░░░      ░░░░░ ░░░░░ ░░░ ░░░░░  ]],
 
-					[[                                                                       ]],
-					[[                                                                       ]],
-					[[                                                                       ]],
+					-- [[																																				 	 ]],
+					-- [[																																				   ]],
+					-- [[	 ________    _______    ________   ___      ___  ___   _____ ______      ]],
+					-- [[	|\   ___  \ |\  ___ \  |\   __  \ |\  \    /  /||\  \ |\   _ \  _   \    ]],
+					-- [[	\ \  \\ \  \\ \   __/| \ \  \|\  \\ \  \  /  / /\ \  \\ \  \\\__\ \  \   ]],
+					-- [[	 \ \  \\ \  \\ \  \_|/__\ \  \\\  \\ \  \/  / /  \ \  \\ \  \\|__| \  \  ]],
+					-- [[	  \ \  \\ \  \\ \  \_|\ \\ \  \\\  \\ \    / /    \ \  \\ \  \    \ \  \ ]],
+					-- [[	   \ \__\\ \__\\ \_______\\ \_______\\ \__/ /      \ \__\\ \__\    \ \__\]],
+					-- [[	    \|__| \|__| \|_______| \|_______| \|__|/        \|__| \|__|     \|__|]],
+					-- [[	                                                                         ]],
+					-- [[	                                                                         ]],
+					-- [[	                                                                         ]],
 				},
 
-				center = {
+				-- Center menu with quick access actions
+				shortcut = {
 					{
-						icon = ' ',
+						icon = ' ',
 						icon_hl = 'Title',
-						desc = 'Find File           ',
+						desc = 'Open File',
 						desc_hl = 'String',
 						key = 'f',
 						keymap = '',
@@ -71,77 +52,99 @@ return {
 						key_format = ' %s', -- remove default surrounding `[]`
 						action = ':execute "cd $PWD" | Telescope find_files'
 					},
-					{
-						icon = ' ',
-						icon_hl = 'Title',
-						desc = 'Find String           ',
-						desc_hl = 'String',
-						key = 't',
-						keymap = '',
-						key_hl = 'Number',
-						key_format = ' %s', -- remove default surrounding `[]`
-						action = ':execute "cd $PWD" | Telescope live_grep'
-					},
-					{
-						icon = ' ',
-						desc = 'Find Dotfiles',
-						key = 'c',
-						keymap = '',
-						key_format = ' %s', -- remove default surrounding `[]`
-						action = 'Telescope find_files search_dirs=~/.config/nvim/'
-					},
-					{
-						icon = ' ',
-						desc = 'Find Recent Projects',
-						key = 'r',
-						keymap = '',
-						key_format = ' %s', -- remove default surrounding `[]`
-						action = 'Telescope projects'
-					},
-					{
-						icon = ' ',
-						desc = 'Update Plugins',
-						key = 'u',
-						keymap = '',
-						key_format = ' %s', -- remove default surrounding `[]`
-						action = 'Lazy update'
-					},
+					-- {
+					-- 	icon = ' ',
+					-- 	icon_hl = 'Title',
+					-- 	desc = 'Search Text',
+					-- 	desc_hl = 'String',
+					-- 	key = 's',
+					-- 	keymap = '',
+					-- 	key_hl = 'Number',
+					-- 	key_format = ' %s',
+					-- 	action = ':Telescope live_grep'
+					-- },
+					-- {
+					-- 	icon = ' ',
+					-- 	icon_hl = 'Title',
+					-- 	desc = 'Open Terminal',
+					-- 	desc_hl = 'String',
+					-- 	key = 't',
+					-- 	keymap = '',
+					-- 	key_hl = 'Number',
+					-- 	key_format = ' %s',
+					-- 	action = ':terminal'
+					-- },
 					{
 						icon = ' ',
 						desc = 'Obsidian Vault',
 						key = 'o',
 						keymap = '',
 						key_format = ' %s', -- remove default surrounding `[]`
-						action = ':execute "cd ~/Documents/Obsidian/mainVault/02 - Zettelkasten/" | Telescope find_files'
+						action = ':ObsidianQuickSwitch'
 					},
 					{
-						icon = ' ',
+						icon = ' ',
+						icon_hl = 'Title',
+						desc = 'Edit Config',
+						desc_hl = 'String',
+						key = 'c',
+						keymap = '',
+						key_hl = 'Number',
+						key_format = ' %s',
+						action = 'Telescope find_files search_dirs=~/.config/nvim/'
+					},
+					{
+						icon = ' ',
+						icon_hl = 'Title',
+						desc = 'Recent Files',
+						desc_hl = 'String',
+						key = 'r',
+						keymap = '',
+						key_hl = 'Number',
+						key_format = ' %s',
+						action = ':Telescope oldfiles'
+					},
+					-- {
+					-- 	icon = ' ',
+					-- 	icon_hl = 'Title',
+					-- 	desc = 'Update Plugins',
+					-- 	desc_hl = 'String',
+					-- 	key = 'u',
+					-- 	keymap = '',
+					-- 	key_hl = 'Number',
+					-- 	key_format = ' %s',
+					-- 	action = ':Lazy update'
+					-- },
+					{
+						icon = ' ',
+						icon_hl = 'Title',
 						desc = 'Quit Neovim',
+						desc_hl = 'String',
 						key = 'q',
 						keymap = '',
-						key_format = ' %s', -- remove default surrounding `[]`
+						key_hl = 'Number',
+						key_format = ' %s',
 						action = ':q'
 					},
-
+					{
+						icon = ' ',
+						desc = 'Find Recent Projects',
+						key = 'p',
+						keymap = '',
+						key_format = ' %s', -- remove default surrounding `[]`
+						action = 'Telescope projects'
+					},
 				},
-				footer = {
-					"                                           ",
-					"                                           ",
-					"                                           ",
-					"                                           ",
-					"                                           ",
-					"                _       _     _            ",
-					"               | |     | |   | |           ",
-					"  __ _ _ __ ___| |__   | |__ | |___      __",
-					" / _` | '__/ __| '_ \\  | '_ \\| __\\ \\ /\\ / /",
-					"| (_| | | | (__| | | | | |_) | |_ \\ V  V / ",
-					" \\__,_|_|  \\___|_| |_| |_.__/ \\__| \\_/\\_/  ",
-					"                                           ",
-					"                                           "
-					-- "  Sharp tools make great work",
-				} --your footer
-			},
 
+				-- Footer section with a simple message
+				footer = {
+					[[                                         ]],
+					[[                                         ]],
+					[[                                         ]],
+					[[     "Stay productive, stay Hyper!"     ]],
+					[[                                         ]],
+				},
+			},
 		}
 	end
 }
