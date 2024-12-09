@@ -20,7 +20,7 @@ while true; do
     # Check if there are any changes to commit
     if ! git diff-index --quiet HEAD; then
         # Commit the changes with the current time as the message
-        git commit -m "Auto-commit on $(date '+%Y-%m-%d %H:%M:%S')"
+        git commit -m "Auto-commit on $(date '+%Y-%m-%d %H:%M:%S') LAPTOP_T480"
 
         # Push the changes to the remote repository
         git push origin master
