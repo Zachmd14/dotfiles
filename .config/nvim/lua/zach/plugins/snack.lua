@@ -13,7 +13,7 @@ return {
 					gap = 1,
 					padding = 1,
 				},
-				{ pane = 2, section = "terminal", cmd = "fortune -s", hl = "header", padding = 1, indent = 8 },
+				{ pane = 2, section = "terminal", cmd = "fortune", hl = "header", padding = 1, indent = 8 },
 				{ pane = 2, icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
 				-- { pane = 2, icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
 				{
