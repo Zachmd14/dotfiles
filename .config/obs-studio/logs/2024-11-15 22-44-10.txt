@@ -1,0 +1,210 @@
+22:44:10.379: Using EGL/X11
+22:44:10.379: CPU Name: Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz
+22:44:10.379: CPU Speed: 1386.080MHz
+22:44:10.379: Physical Cores: 4, Logical Cores: 8
+22:44:10.379: Physical Memory: 15868MB Total, 359MB Free
+22:44:10.379: Kernel Version: Linux 6.11.6-arch1-1
+22:44:10.379: Distribution: "Arch Linux" Unknown
+22:44:10.379: Desktop Environment: i3 (i3)
+22:44:10.379: Session Type: x11
+22:44:10.379: Window System: X11.0, Vendor: The X.Org Foundation, Version: 1.21.1
+22:44:10.383: Qt Version: 6.8.0 (runtime), 6.8.0 (compiled)
+22:44:10.383: Portable mode: false
+22:44:10.474: OBS 30.2.3-1 (linux)
+22:44:10.474: ---------------------------------
+22:44:10.476: ---------------------------------
+22:44:10.476: audio settings reset:
+22:44:10.476: 	samples per sec: 48000
+22:44:10.476: 	speakers:        2
+22:44:10.476: 	max buffering:   960 milliseconds
+22:44:10.476: 	buffering type:  dynamically increasing
+22:44:10.490: ---------------------------------
+22:44:10.490: Initializing OpenGL...
+22:44:10.624: Loading up OpenGL on adapter Intel Mesa Intel(R) UHD Graphics 620 (KBL GT2)
+22:44:10.624: OpenGL loaded successfully, version 4.6 (Core Profile) Mesa 24.2.6-arch1.1, shading language 4.60
+22:44:10.879: ---------------------------------
+22:44:10.879: video settings reset:
+22:44:10.879: 	base resolution:   1920x1080
+22:44:10.879: 	output resolution: 1920x1080
+22:44:10.879: 	downscale filter:  Bicubic
+22:44:10.879: 	fps:               60/1
+22:44:10.879: 	format:            NV12
+22:44:10.879: 	YUV mode:          Rec. 709/Partial
+22:44:10.880: NV12 texture support enabled
+22:44:10.880: P010 texture support not available
+22:44:10.894: Audio monitoring device:
+22:44:10.894: 	name: Default
+22:44:10.894: 	id: default
+22:44:10.894: ---------------------------------
+22:44:10.910: Failed to load 'en-US' text for module: 'decklink-captions.so'
+22:44:10.925: Failed to load 'en-US' text for module: 'decklink-output-ui.so'
+22:44:10.938: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+22:44:10.938: Failed to initialize module 'decklink.so'
+22:44:11.255: [pipewire] No capture sources available
+22:44:11.483: VAAPI: API version 1.22
+22:44:11.484: FFmpeg VAAPI H264 encoding supported
+22:44:11.485: FFmpeg VAAPI AV1 encoding not supported
+22:44:11.487: FFmpeg VAAPI HEVC encoding supported
+22:44:11.687: ---------------------------------
+22:44:11.687:   Loaded Modules:
+22:44:11.687:     text-freetype2.so
+22:44:11.687:     rtmp-services.so
+22:44:11.687:     obs-x264.so
+22:44:11.687:     obs-webrtc.so
+22:44:11.687:     obs-vst.so
+22:44:11.687:     obs-transitions.so
+22:44:11.687:     obs-qsv11.so
+22:44:11.687:     obs-outputs.so
+22:44:11.687:     obs-libfdk.so
+22:44:11.687:     obs-filters.so
+22:44:11.687:     obs-ffmpeg.so
+22:44:11.687:     linux-v4l2.so
+22:44:11.687:     linux-pulseaudio.so
+22:44:11.687:     linux-pipewire.so
+22:44:11.687:     linux-jack.so
+22:44:11.687:     linux-capture.so
+22:44:11.687:     linux-alsa.so
+22:44:11.687:     image-source.so
+22:44:11.687:     frontend-tools.so
+22:44:11.687:     decklink-output-ui.so
+22:44:11.687:     decklink-captions.so
+22:44:11.687: ---------------------------------
+22:44:11.688: ---------------------------------
+22:44:11.688: Available Encoders:
+22:44:11.688:   Video Encoders:
+22:44:11.688: 	- ffmpeg_svt_av1 (SVT-AV1)
+22:44:11.688: 	- ffmpeg_aom_av1 (AOM AV1)
+22:44:11.688: 	- ffmpeg_vaapi_tex (FFmpeg VAAPI H.264)
+22:44:11.688: 	- hevc_ffmpeg_vaapi_tex (FFmpeg VAAPI HEVC)
+22:44:11.688: 	- obs_qsv11_v2 (QuickSync H.264)
+22:44:11.688: 	- obs_qsv11_hevc (QuickSync HEVC)
+22:44:11.688: 	- obs_x264 (x264)
+22:44:11.688:   Audio Encoders:
+22:44:11.688: 	- ffmpeg_aac (FFmpeg AAC)
+22:44:11.688: 	- ffmpeg_opus (FFmpeg Opus)
+22:44:11.688: 	- ffmpeg_pcm_s16le (FFmpeg PCM (16-bit))
+22:44:11.688: 	- ffmpeg_pcm_s24le (FFmpeg PCM (24-bit))
+22:44:11.688: 	- ffmpeg_pcm_f32le (FFmpeg PCM (32-bit float))
+22:44:11.688: 	- ffmpeg_alac (FFmpeg ALAC (24-bit))
+22:44:11.688: 	- ffmpeg_flac (FFmpeg FLAC (16-bit))
+22:44:11.688: 	- libfdk_aac (libfdk AAC)
+22:44:11.689: ==== Startup complete ===============================================
+22:44:11.736: All scene data cleared
+22:44:11.736: ------------------------------------------------
+22:44:11.747: pulse-input: Server name: 'PulseAudio (on PipeWire 1.2.6) 15.0.0'
+22:44:11.747: pulse-input: Audio format: s32le, 48000 Hz, 2 channels
+22:44:11.747: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor' (default)
+22:44:11.747: [Loaded global audio device]: 'Desktop Audio'
+22:44:11.748: pulse-input: Server name: 'PulseAudio (on PipeWire 1.2.6) 15.0.0'
+22:44:11.748: pulse-input: Audio format: s32le, 48000 Hz, 2 channels
+22:44:11.748: pulse-input: Started recording from 'alsa_input.pci-0000_00_1f.3.analog-stereo' (default)
+22:44:11.748: [Loaded global audio device]: 'Mic/Aux'
+22:44:11.749: v4l2-input: Start capture from /dev/video42
+22:44:11.749: v4l2-input: Unable to open device
+22:44:11.749: v4l2-input: Initialization failed, errno: No such file or directory
+22:44:11.750: pulse-input: Server name: 'PulseAudio (on PipeWire 1.2.6) 15.0.0'
+22:44:11.751: pulse-input: Audio format: s32le, 48000 Hz, 2 channels
+22:44:11.751: pulse-input: Started recording from 'alsa_input.pci-0000_00_1f.3.analog-stereo'
+22:44:11.754: Switched to scene 'Scene'
+22:44:11.754: ------------------------------------------------
+22:44:11.754: Loaded scenes:
+22:44:11.754: - scene 'Scene':
+22:44:11.754:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+22:44:11.754:     - source: 'Audio Input Capture (PulseAudio)' (pulse_input_capture)
+22:44:11.754: ------------------------------------------------
+22:44:12.333: adding 21 milliseconds of audio buffering, total audio buffering is now 21 milliseconds (source: Desktop Audio)
+22:44:12.333: 
+22:44:12.525: adding 64 milliseconds of audio buffering, total audio buffering is now 85 milliseconds (source: Audio Input Capture (PulseAudio))
+22:44:12.525: 
+22:44:17.187: User added scene 'Screen'
+22:44:17.190: User switched to scene 'Screen'
+22:44:29.833: [window-capture: 'Window Capture (Xcomposite)'] update settings:
+22:44:29.833: 	title: Alarm Clock Short Sound Effect | Download Free MP3 - Chosic — Zen Browser
+22:44:29.833: 	class: Navigator
+22:44:29.833: 
+22:44:29.833: xcb_composite_name_window_pixmap failed
+22:44:29.837: User added source 'Window Capture (Xcomposite)' (xcomposite_input) to scene 'Screen'
+22:44:29.876: [window-capture: 'Window Capture (Xcomposite)'] update settings:
+22:44:29.876: 	title: ./DiscordCanary/DiscordCanary
+22:44:29.876: 	class: kitty
+22:44:29.876: 
+22:44:40.627: [window-capture: 'Window Capture (Xcomposite)'] update settings:
+22:44:40.627: 	title: ./kdenlive-master-9107-linux-gcc-x86_64.AppImage
+22:44:40.627: 	class: kitty
+22:44:40.627: 
+22:44:40.627: xcb_composite_name_window_pixmap failed
+22:44:48.493: [window-capture: 'Window Capture (Xcomposite)'] update settings:
+22:44:48.493: 	title: ./DiscordCanary/DiscordCanary
+22:44:48.493: 	class: kitty
+22:44:48.493: 
+22:45:00.610: [window-capture: 'Window Capture (Xcomposite)'] update settings:
+22:45:00.610: 	title: ./kdenlive-master-9107-linux-gcc-x86_64.AppImage
+22:45:00.610: 	class: kitty
+22:45:00.610: 
+22:45:07.660: [window-capture: 'Window Capture (Xcomposite)'] update settings:
+22:45:07.660: 	title: 1HSWM / HD 1080i 25 fps — Kdenlive
+22:45:07.660: 	class: AppRun.wrapped
+22:45:07.660: 
+22:45:24.006: Starting Virtual Camera output to Program
+22:45:40.507: Get on org.freedesktop.portal.Settings returned an invalid reply
+22:45:40.507: Get on org.freedesktop.portal.Settings returned an invalid reply
+22:45:40.668:   OpenType support missing for "Open Sans", script 11
+22:45:40.675:   OpenType support missing for "Open Sans", script 12
+22:45:40.677:   OpenType support missing for "Open Sans", script 16
+22:45:40.682:   OpenType support missing for "Open Sans", script 20
+22:45:57.042: NV12 texture support enabled
+22:45:57.042: P010 texture support not available
+22:46:01.850: Starting Virtual Camera output to Scene : Scene
+22:47:40.091: v4l2-input: Start capture from 
+22:47:40.091: v4l2-input: Unable to open device
+22:47:40.091: v4l2-input: Initialization failed, errno: No such file or directory
+22:47:40.095: User added source 'Video Capture Device (V4L2) 2' (v4l2_input) to scene 'Screen'
+22:47:40.120: v4l2-input: /dev/video1 seems to not support video capture
+22:47:40.120: v4l2-input: Found device 'Integrated Camera: Integrated C' at /dev/video0
+22:47:40.123: v4l2-input: Found input 'Camera 1' (Index 0)
+22:47:40.123: v4l2-controls: setting default for Power Line Frequency to 1
+22:47:40.123: v4l2-controls: setting default for Auto Exposure to 3
+22:47:40.123: v4l2-input: Pixelformat: Motion-JPEG (available)
+22:47:40.123: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+22:47:40.123: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+22:47:40.123: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+22:47:40.123: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+22:47:40.123: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+22:47:40.124: v4l2-input: Stepwise and Continuous framesizes are currently hardcoded
+22:47:40.125: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+22:47:40.126: v4l2-input: Start capture from /dev/video0
+22:47:40.127: v4l2-input: Input: 0
+22:47:40.127: v4l2-input: Resolution: 1280x720
+22:47:40.127: v4l2-input: Pixelformat: MJPG
+22:47:40.127: v4l2-input: Linesize: 0 Bytes
+22:47:40.127: v4l2-input: Framerate: 30.00 fps
+22:47:40.130: v4l2-input: Pixelformat: Motion-JPEG (available)
+22:47:40.130: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+22:47:40.130: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+22:47:40.130: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+22:47:40.130: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+22:47:40.130: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+22:47:40.131: v4l2-input: Stepwise and Continuous framesizes are currently hardcoded
+22:47:40.131: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+22:47:40.232: v4l2-input: /dev/video0: Stopped capture after 0 frames
+22:47:40.232: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+22:47:40.254: v4l2-input: Start capture from /dev/video0
+22:47:40.255: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+22:47:40.255: v4l2-input: Input: 0
+22:47:40.260: v4l2-input: Resolution: 1280x720
+22:47:40.260: v4l2-input: Pixelformat: MJPG
+22:47:40.260: v4l2-input: Linesize: 0 Bytes
+22:47:40.260: v4l2-input: Framerate: 30.00 fps
+22:47:40.262: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+22:47:45.234: v4l2-input: /dev/video0: Stopped capture after 52 frames
+22:47:45.323: v4l2-input: Start capture from 
+22:47:45.323: v4l2-input: Unable to open device
+22:47:45.324: v4l2-input: Initialization failed, errno: No such file or directory
+22:47:49.633: User Removed source 'Video Capture Device (V4L2) 2' (v4l2_input) from scene 'Screen'
+22:47:54.476: [window-capture: 'Window Capture (Xcomposite)'] update settings:
+22:47:54.476: 	title: ./DiscordCanary/DiscordCanary
+22:47:54.476: 	class: kitty
+22:47:54.476: 
+22:48:06.505: NV12 texture support enabled
+22:48:06.505: P010 texture support not available
+22:48:08.842: Starting Virtual Camera output to Scene : Scene
