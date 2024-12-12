@@ -4,6 +4,9 @@
 # set caps lock as escape
 setxkbmap -option caps:escape
 
+# start tmux
+tmux
+
 # Bob the fish config
 set -g theme_color_scheme dark
 set -g theme_display_git_untracked no
