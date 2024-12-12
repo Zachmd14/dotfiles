@@ -30,9 +30,9 @@ return {
 		keymap = {
 			["<C-c>"] = { "show" },
 			["<C-CR>"] = { "hide" },
-			["<S-CR>"] = { "select_and_accept", "fallback" },
-			["<Tab>"] = { "select_next", "fallback" },
-			["<S-Tab>"] = { "select_prev", "fallback" },
+			["<S-m>"] = { "select_and_accept", "fallback" },
+			["<S-k>"] = { "select_next", "fallback" },
+			["<S-l>"] = { "select_prev", "fallback" },
 			["<Down>"] = { "select_next", "fallback" },
 			["<Up>"] = { "select_prev", "fallback" },
 			["<PageDown>"] = { "scroll_documentation_down" },
