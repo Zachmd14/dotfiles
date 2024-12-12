@@ -79,7 +79,7 @@ tiling_drag modifier titlebar
 
 # start program
 
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 bindsym $mod+w exec zen-browser
 bindsym $mod+u exec obsidian
 bindsym $mod+n exec --no-startup-id sh -c "kitty -e nvim"
