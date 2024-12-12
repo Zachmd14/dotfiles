@@ -1,0 +1,7 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/ayu_dark.toml"
+]
+
+[font]
+normal = {family = "JetBrainsMono Nerd Font", style = "Bold"}
