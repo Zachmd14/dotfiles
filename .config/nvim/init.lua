@@ -23,14 +23,10 @@ vim.api.nvim_set_keymap('v', 'l', 'k', { noremap = true })
 vim.api.nvim_set_keymap('v', 'm', 'l', { noremap = true })
 
 local opts = { noremap = true, silent = true }
--- Press Shift + Ctrl + l to move to the window above
-vim.api.nvim_set_keymap('n', '<C-l>', ':wincmd k<CR>', opts)
--- Press Shift + Ctrl + j to move to the window to the left
-vim.api.nvim_set_keymap('n', '<C-j>', ':wincmd h<CR>', opts)
--- Press Shift + Ctrl + k to move to the window below
-vim.api.nvim_set_keymap('n', '<C-k>', ':wincmd j<CR>', opts)
--- Press Shift + Ctrl + m to move to the window to the right
-vim.api.nvim_set_keymap('n', '<C-m>', ':wincmd l<CR>', opts)
+vim.api.nvim_set_keymap('n', '<A-l>', ':wincmd k<CR>', opts)
+vim.api.nvim_set_keymap('n', '<A-j>', ':wincmd h<CR>', opts)
+vim.api.nvim_set_keymap('n', '<A-k>', ':wincmd j<CR>', opts)
+vim.api.nvim_set_keymap('n', '<A-m>', ':wincmd l<CR>', opts)
 -- Prevent 's' from entering insert mode
 vim.api.nvim_set_keymap('n', 's', '<NOP>', opts)
 -- Create a new vertical split with 'sn' in normal mode
