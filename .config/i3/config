@@ -253,12 +253,12 @@ bindsym $mod+p			gaps inner current plus 5
 bindsym $mod+Shift+p 	gaps inner current minus 5
 
 # set frame title
-default_border pixel 3
-default_floating_border pixel 3
+default_border pixel 0
+default_floating_border pixel 0
 for_window [class="Polybar"] border none
 smart_borders on
 
-# # class                 border  backgr. text  indicator child_border
+# class                 border  backgr. text  indicator child_border
 client.focused          #ffffff #285577 #ffffff #222222   #ffffff
 client.focused_inactive #222222 #5f676a #ffffff #222222   #222222
 client.unfocused        #222222 #222222 #888888 #222222   #222222
