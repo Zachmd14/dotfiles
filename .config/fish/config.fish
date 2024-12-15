@@ -85,7 +85,9 @@ if status is-interactive
 		abbr remind 'bash /home/zach/scripts/reminder.sh -t'
 		abbr history 'history | fzf | xclip -selection clipboard'
 		abbr commit 'git commit -m'
-		abbr nf 'nvim (fzf)'
+		abbr nf 'nvim (fzf --tmux)'
+		abbr fzf 'fzf --tmux'
+		abbr color 'bash -c "$(wget -qO- https://git.io/vQgMr)"'
 end
 
 function fish_user_key_bindings
