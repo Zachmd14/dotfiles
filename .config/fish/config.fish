@@ -71,7 +71,7 @@ if status is-interactive
     abbr mvn-new 'mvn archetype:generate -DgroupId=com.example -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false -DartifactId='
     abbr td 'todoist-cli --color --indent'
     abbr tdday 'todoist-cli --color --indent l --filter today'
-		abbr fzf 'fzf | xclip -selection clipboard'
+
 		# abbr fastfetch 'fastfetch --logo-type none'
 		abbr config '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 		abbr gpom 'git push origin main'
