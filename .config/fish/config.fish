@@ -4,6 +4,9 @@
 # set caps lock as escape
 setxkbmap -option caps:escape
 
+# export fzf settigns
+export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --info=inline --border --margin=1 --padding=1"
+
 # Bob the fish config
 set -g theme_color_scheme dark
 set -g theme_display_git_untracked no
@@ -82,6 +85,7 @@ if status is-interactive
 		abbr remind 'bash /home/zach/scripts/reminder.sh -t'
 		abbr history 'history | fzf | xclip -selection clipboard'
 		abbr commit 'git commit -m'
+		abbr nf 'nvim (fzf)'
 end
 
 function fish_user_key_bindings
