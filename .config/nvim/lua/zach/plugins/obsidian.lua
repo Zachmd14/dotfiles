@@ -31,6 +31,7 @@ return {
 			vim.keymap.set('n', '<leader>ot', ':ObsidianTOC<CR>', {}),
 			vim.keymap.set('n', '<leader>og', ':ObsidianTags<CR>', {}),
 			vim.keymap.set('n', '<leader>od', ':ObsidianToday<CR>', {}),
+			vim.keymap.set('n', '<leader>op', ':ObsidianPasteImg<CR>', {}),
 
 			vim.keymap.set('n', '<leader>on', function()
 				local title = vim.fn.input('Enter note title: ')
@@ -64,7 +65,7 @@ return {
 
 		new_notes_location = "current_dir",
 		attachments = {
-			img_folder = "~/Documents/Obsidian/mainVault/98 - Files/",
+			img_folder = "~/Documents/Obsidian/mainVault/",
 		},
 
 		daily_notes = {
