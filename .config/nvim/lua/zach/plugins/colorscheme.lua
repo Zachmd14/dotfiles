@@ -1,10 +1,8 @@
 return {
-	'Luxed/ayu-vim',
+	"rebelot/kanagawa.nvim",
 	lazy = false,
 	priority = 1000,
-	opts = {},
 	config = function()
-		--load the colorscheme
-		vim.cmd [[colorscheme ayu]]
-	end,
+		vim.cmd.colorscheme('kanagawa')
+	end
 }

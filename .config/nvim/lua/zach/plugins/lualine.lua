@@ -54,7 +54,7 @@ return {
 		lualine.setup({
 			options = {
 				-- theme = my_lualine_theme,
-				theme = "ayu",
+				theme = "monokai-pro",
 			},
 			sections = {
 				lualine_x = {
