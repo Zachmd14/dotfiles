@@ -3,8 +3,8 @@ return {
 	config = function()
 		-- Override some defaults
 		require("tint").setup({
-			tint = -100,                                             -- Darken colors, use a positive value to brighten
-			saturation = 0,                                          -- Saturation to preserve
+			tint = -5,                                               -- Darken colors, use a positive value to brighten
+			saturation = 0.2,                                        -- Saturation to preserve
 			transforms = require("tint").transforms.SATURATE_TINT,   -- Showing default behavior, but value here can be predefined set of transforms
 			tint_background_colors = false,                          -- Tint background portions of highlight groups
 			highlight_ignore_patterns = { "WinSeparator", "Status.*" }, -- Highlight group patterns to ignore, see `string.find`
