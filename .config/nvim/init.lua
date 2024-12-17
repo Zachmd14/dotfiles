@@ -23,10 +23,10 @@ vim.api.nvim_set_keymap('v', 'l', 'k', { noremap = true })
 vim.api.nvim_set_keymap('v', 'm', 'l', { noremap = true })
 
 local opts = { noremap = true, silent = true }
-vim.api.nvim_set_keymap('n', '<A-l>', ':wincmd k<CR>', opts)
-vim.api.nvim_set_keymap('n', '<A-j>', ':wincmd h<CR>', opts)
-vim.api.nvim_set_keymap('n', '<A-k>', ':wincmd j<CR>', opts)
-vim.api.nvim_set_keymap('n', '<A-m>', ':wincmd l<CR>', opts)
+vim.api.nvim_set_keymap('n', '<S-l>', ':wincmd k<CR>', opts)
+vim.api.nvim_set_keymap('n', '<S-j>', ':wincmd h<CR>', opts)
+vim.api.nvim_set_keymap('n', '<S-k>', ':wincmd j<CR>', opts)
+vim.api.nvim_set_keymap('n', '<S-m>', ':wincmd l<CR>', opts)
 -- Prevent 's' from entering insert mode
 vim.api.nvim_set_keymap('n', 's', '<NOP>', opts)
 -- Create a new vertical split with 'sn' in normal mode
@@ -49,7 +49,7 @@ vim.api.nvim_set_keymap('n', '<Space>cp', ':cd $PWD<CR>', opts)
 vim.api.nvim_set_keymap('i', '<C-BS>', '<C-W>', opts)
 vim.api.nvim_set_keymap('i', '<C-Del>', '<C-O>dw', opts)
 
-vim.api.nvim_set_keymap('n', '<Space>b', ':Dashboard<CR>', opts)
+-- vim.api.nvim_set_keymap('n', '<Space>b', ':Dashboard<CR>', opts)
 
 -- set tab indent
 vim.o.expandtab = false
