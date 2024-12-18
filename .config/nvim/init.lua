@@ -92,7 +92,6 @@ vim.api.nvim_set_var('mapleader', ' ')
 vim.g.vimtex_mappings_enabled = 1
 
 -- markdown folding
-
 vim.opt.compatible = false
 if vim.fn.has("autocmd") then
 	vim.cmd("filetype plugin indent on")
