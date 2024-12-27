@@ -116,7 +116,7 @@ return {
 		},
 		bullet = {
 			-- Turn on / off list bullet rendering
-			enabled = true,
+			enabled = false,
 			-- Replaces '-'|'+'|'*' of 'list_item'
 			-- How deeply nested the list is determines the 'level', how far down at that level determines the 'index'
 			-- If a function is provided both of these values are passed in using 1 based indexing
