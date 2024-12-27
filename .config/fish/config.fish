@@ -88,6 +88,7 @@ if status is-interactive
 		abbr nf 'nvim (fzf --tmux)'
 		abbr fzf 'fzf --tmux'
 		abbr color 'bash -c "$(wget -qO- https://git.io/vQgMr)"'
+		abbr com 'for cmd in (ls /usr/bin /bin /usr/local/bin); echo $cmd; end | fzf'
 end
 
 function fish_user_key_bindings
