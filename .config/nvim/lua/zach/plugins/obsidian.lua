@@ -32,15 +32,18 @@ return {
 			vim.keymap.set('n', '<leader>og', ':ObsidianTags<CR>', {}),
 			vim.keymap.set('n', '<leader>od', ':ObsidianToday<CR>', {}),
 			vim.keymap.set('n', '<leader>op', ':ObsidianPasteImg<CR>', {}),
-
-			vim.keymap.set('n', '<leader>on', function()
-				local title = vim.fn.input('Enter note title: ')
-				if title ~= '' then
-					vim.cmd('ObsidianNew ' .. title)
-				else
-					print('Title cannot be empty')
-				end
-			end, {})
+			vim.keymap.set('n', '<leader>or',
+				':call system("find ~/Documents/Obsidian/mainVault/ -type f | awk -v var=$(($RANDOM)) "NR==var {print $0}" | xargs nvim")<CR>',
+				{}),
+			vim.keymap.set('n', '<leader>on',
+				function()
+					local title = vim.fn.input('Enter note title: ')
+					if title ~= '' then
+						vim.cmd('ObsidianNew ' .. title)
+					else
+						print('Title cannot be empty')
+					end
+				end, {})
 
 		},
 
