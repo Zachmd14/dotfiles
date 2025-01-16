@@ -37,13 +37,14 @@ exec "bash /home/zach/scripts/start_nitrogen.sh"
 exec "bash /home/zach/.config/polybar/launch.sh"
 exec "bash /home/zach/scripts/start_xidlehook.sh"
 exec "batsignal -w 25 -W Battery at warning level -c 10 -W Baterry at critical level"
-exec "xinput set-prop 14 'libinput Accel Speed' -0.37"
+exec "xinput set-prop 9 'libinput Accel Speed' 0"
 exec "alternating_layouts.py"
 exec "unclutter -idle 0.5"
 exec "tlp start"
 exec 'bash /home/zach/scripts/escape-key-bind.sh'
 exec 'xbindkeys'
 exec 'bash /home/scripts/auto_commit.sh'
+exec 'setxkbmap -option caps:escape'
 
 # exec "sudo ufw enable"
 # exec "sudo systemctl start sshd"
@@ -232,8 +233,8 @@ bindsym XF86MonBrightnessDown exec backlight_control -10
 bindsym XF86MonBrightnessUp exec backlight_control +10
 bindsym Home exec "bash ~/scripts/lock.sh"
 bindsym $mod+Home exec "bash ~/scripts/suspend.sh"
-bindsym --release Print exec scrot '/home/zach/Pictures/Screenshots/%F.png' -e 'xclip -selection clipboard -target image/png -i $f'
-bindsym --release $mod+Print exec scrot -s '/home/zach/Pictures/Screenshots/%F.png' -e 'xclip -selection clipboard -target image/png -i $f'
+bindsym --release Print exec scrot '/home/zach/Pictures/Screenshots/%F.png' -e 'xclip -selection clipboard -target image/png -i $f "Screenshot taken"'
+bindsym --release $mod+Print exec scrot -s '/home/zach/Pictures/Screenshots/%F.png' -e 'xclip -selection clipboard -target image/png -i $f && notify-send "Screenshot taken"'
 bindsym $mod+XF86Display exec "xrandr --output eDP-1 --auto && bash /home/zach/.config/polybar/launch.sh"
 bindsym XF86Display exec "xrandr --output eDP-1 --off"
 
