@@ -1,0 +1,334 @@
+return {
+	'L3MON4D3/LuaSnip',
+	config = function()
+		local ls = require "luasnip"
+		local s = ls.snippet
+		local t = ls.text_node
+		local i = ls.insert_node
+		local f = ls.function_node
+
+		ls.add_snippets("tex", {
+			s("date", {
+				f(function()
+					return os.date("%Y-%m-%d") -- Formats the date as YYYY-MM-DD
+				end),
+			}),
+
+			s("box", {
+				t("\\fbox{"), i(1, "text inside the box"), t("}"),
+			}),
+
+			s("sl", {
+				t("\\begin{sol}{"), i(1, "title"), t("}"),
+				t({ "", "\t" }), i(2, "text"),
+				t({ "", "\\end{sol}" })
+			}),
+		})
+
+		ls.add_snippets("markdown", {
+
+			s("bold", {
+				t("**"), i(1), t("**")
+			}),
+
+			s("imp", {
+				t("> [!important]"),
+				t({ "", "" }), -- Retour à la ligne
+				t("> "), i(1)
+			}),
+
+			s("date", {
+				f(function()
+					return os.date("%Y-%m-%d") -- Formats the date as YYYY-MM-DD
+				end),
+			}),
+
+			s("box", {
+				t("\\fbox{"), i(1, "text inside the box"), t("}"),
+			}),
+
+			s("sl", {
+				t("\\begin{sol}{"), i(1, "title"), t("}"),
+				t({ "", "\t" }), i(2, "text"),
+				t({ "", "\\end{sol}" })
+			}),
+		})
+
+		-- Enable autosnippets in your configuration
+		ls.config.set_config({
+			enable_autosnippets = true,
+		})
+
+		vim.api.nvim_set_keymap("i", "<Tab>", "<cmd>lua require'luasnip'.jump(1)<Cr>", { noremap = true, silent = true })
+		vim.api.nvim_set_keymap("i", "<s-Tab>", "<cmd>lua require'luasnip'.jump(-1)<Cr>", { noremap = true, silent = true })
+
+		-- latex snippets
+		-- ls.add_snippets("tex", {
+		--
+		-- 	s("page", {
+		-- 		t "\\newpage"
+		-- 	}),
+		--
+		-- 	s("beg", {
+		-- 		t("\\begin{"), i(1, "environment"), t({ "}", "\t" }),
+		-- 		i(0),
+		-- 		t({ "", "\\end{" }), f(function(args) return args[1][1] end, { 1 }), t("}"),
+		-- 	}),
+		--
+		-- 	s("mk", {
+		-- 		t("$"), i(1), t("$"), i(2), f(function(args, snip)
+		-- 		local following = snip.env.TM_NEXT_TEXT or ""
+		-- 		if not string.match(following, "^[,%.%?%- ]") then
+		-- 			return " "
+		-- 		else
+		-- 			return ""
+		-- 		end
+		-- 	end, {}),
+		-- 		i(0),
+		-- 	}),
+		--
+		-- 	s("dm", {
+		-- 		t("\\["),
+		-- 		t({ "", "\t" }), i(1), t({ "", "\\]" }),
+		-- 		t({ "", "\t" }), i(2),
+		-- 	}),
+		--
+		-- 	s("sm", {
+		-- 		t("\\sum_{"), i(1, "first"), t("}^{"), i(2, "max"), t("}{"), i(3, "formula"), t("}")
+		-- 	}),
+		--
+		-- 	s("lm", {
+		-- 		t("\\lim{"), i(1, "set"), t(" \\to "), i(2, "plus or less"), t("\\infty}"),
+		-- 	}),
+		--
+		-- 	s("_", {
+		-- 		i(1, "letter"), t("_{"), i(2, "number"), t("}"), i(3)
+		-- 	}),
+		--
+		--
+		-- 	s({ trig = "([A-Za-z%d]+)sr", regTrig = true }, { -- Match letters or numbers followed by 'sr'
+		-- 		f(function(_, snip)
+		-- 			local var = snip.captures[1]               -- Capture the letter or number before 'sr'
+		--
+		-- 			return var .. "^2"                         -- Format as 'a^2' or '3^2'
+		-- 		end)
+		-- 	}),
+		--
+		-- 	s("tx", {
+		-- 		t("\\text{"), i(1, "text"), t("}")
+		-- 	}),
+		--
+		-- 	s({ trig = "//", regTrig = true }, { -- Trigger with "fr"
+		-- 		t("\\frac{"), i(1, "numerator"), t("}{"), i(2, "denominator"), t("}")
+		-- 	}),
+		--
+		-- 	s({ trig = "fall", regTrig = true }, { -- Trigger with "fall"
+		-- 		t("\\forall "), i(1, "letter"), t("\\in"), t("\\mathbb{"), i(2, "set"), t("}")
+		-- 	}),
+		--
+		-- 	s("table", {
+		-- 		t("\\begin{table}["),
+		-- 		i(1, "htpb"),
+		-- 		t({ "]", "\t\\centering", "\t\\caption{" }),
+		-- 		i(2, "caption"),
+		-- 		t({ "}", "\t\\label{tab:" }),
+		-- 		i(3, "label"),
+		-- 		t({ "}", "\t\\begin{tabular}{" }),
+		-- 		i(4, "c"),
+		-- 		t({ "}", "\t\t" }),
+		-- 		i(5),
+		-- 		t({ "", "\t\\end{tabular}", "\\end{table}" }),
+		-- 	})
+		--
+		-- }, { type = "autosnippets", key = "all_auto" })
+
+
+		-- LaTeX snippets
+		ls.add_snippets("tex", {
+			-- New page
+			s("page", {
+				t("\\newpage")
+			}),
+
+			-- Begin and End Environment
+			s("beg", {
+				t("\\begin{"), i(1, "environment"), t({ "}", "\t" }),
+				i(0),
+				t({ "", "\\end{" }), f(function(args) return args[1][1] end, { 1 }), t("}"),
+			}),
+
+			-- Inline Math
+			s("mk", {
+				t("$"), i(1), t("$"), i(2),
+				f(function(_, snip)
+					local following = snip.env.TM_NEXT_TEXT or ""
+					if not string.match(following, "^[,%.%?%- ]") then
+						return " "
+					else
+						return ""
+					end
+				end, {}),
+				i(0),
+			}),
+
+			-- Display Math
+			s("dm", {
+				t("\\["),
+				t({ "", "\t" }), i(1), t({ "", "\\]" }),
+				t({ "", "\t" }), i(2),
+			}),
+
+			-- Summation
+			s("sm", {
+				t("\\sum_{"), i(1, "first"), t("}^{"), i(2, "max"), t("}{"), i(3, "formula"), t("}")
+			}),
+
+			-- Limit
+			s("lm", {
+				t("\\lim_{"), i(1, "set"), t(" \\to "), i(2, "plus or less"), t("\\infty}")
+			}),
+
+			-- Subscript
+			s("_", {
+				i(1, "letter"), t("_{"), i(2, "number"), t("}"), i(3)
+			}),
+
+			-- Superscript (Autosnippet)
+			s({ trig = "([A-Za-z%d]+)sr", regTrig = true, snippetType = "autosnippet" }, {
+				f(function(_, snip)
+					local var = snip.captures[1] -- Capture the letter or number before 'sr'
+					return var .. "^2"      -- Format as 'a^2' or '3^2'
+				end)
+			}),
+
+			-- Text
+			s("tx", {
+				t("\\text{"), i(1, "text"), t("}")
+			}),
+
+			-- Fraction
+			s({ trig = "//", regTrig = true, snippetType = "autosnippet" }, {
+				t("\\frac{"), i(1, "numerator"), t("}{"), i(2, "denominator"), t("}")
+			}),
+
+			-- For All
+			s({ trig = "fall", regTrig = true, snippetType = "autosnippet" }, {
+				t("\\forall "), i(1, "letter"), t(" \\in \\mathbb{"), i(2, "set"), t("}")
+			}),
+
+			-- Table
+			s("table", {
+				t("\\begin{table}["),
+				i(1, "htpb"),
+				t({ "]", "\t\\centering", "\t\\caption{" }),
+				i(2, "caption"),
+				t({ "}", "\t\\label{tab:" }),
+				i(3, "label"),
+				t({ "}", "\t\\begin{tabular}{" }),
+				i(4, "c"),
+				t({ "}", "\t\t" }),
+				i(5),
+				t({ "", "\t\\end{tabular}", "\\end{table}" }),
+			})
+		}, { type = "autosnippets", key = "all_auto" })
+
+
+		--- markdown
+		ls.add_snippets("markdown", {
+
+			s("sqrt", {
+				t("\\sqrt")
+			}),
+
+			s("rlarrow", {
+				t("\\rightleftarrows")
+			}),
+
+			-- 1x3 Table
+			s("table1x3", {
+				t("| "), i(1, "Header 1"), t(" | "), i(2, "Header 2"), t(" | "), i(3, "Header 3"), t(" |"),
+				t({ "", "|---|---|---|", "" }), -- The separator line
+				t("| "), i(4, "Row 1 Col 1"), t(" | "), i(5, "Row 1 Col 2"), t(" | "), i(6, "Row 1 Col 3"), t(" |"),
+			}),
+
+			-- 2x3 Table
+			s("table2x3", {
+				t("| "), i(1, "Header 1"), t(" | "), i(2, "Header 2"), t(" | "), i(3, "Header 3"), t(" |"),
+				t({ "", "|---|---|---|", "" }), -- The separator line
+				t("| "), i(4, "Row 1 Col 1"), t(" | "), i(5, "Row 1 Col 2"), t(" | "), i(6, "Row 1 Col 3"), t(" |"),
+				t({ "", "| " }), i(7, "Row 2 Col 1"), t(" | "), i(8, "Row 2 Col 2"), t(" | "), i(9, "Row 2 Col 3"), t(" |"),
+			}),
+
+			-- 3x3 Table
+			s("table3x3", {
+				t("| "), i(1, "Header 1"), t(" | "), i(2, "Header 2"), t(" | "), i(3, "Header 3"), t(" |"),
+				t({ "", "|---|---|---|", "" }), -- The separator line
+				t("| "), i(4, "Row 1 Col 1"), t(" | "), i(5, "Row 1 Col 2"), t(" | "), i(6, "Row 1 Col 3"), t(" |"),
+				t({ "", "| " }), i(7, "Row 2 Col 1"), t(" | "), i(8, "Row 2 Col 2"), t(" | "), i(9, "Row 2 Col 3"), t(" |"),
+				t({ "", "| " }), i(10, "Row 3 Col 1"), t(" | "), i(11, "Row 3 Col 2"), t(" | "), i(12, "Row 3 Col 3"), t(" |"),
+			}),
+
+			s("sm", {
+				t("\\sum_{"), i(1, "first"), t("}^{"), i(2, "max"), t("}{"), i(3, "formula"), t("}")
+			}),
+
+			s("lm", {
+				t("\\lim_{"), i(1, "set"), t(" \\to "), i(2, "plus or less"), t("\\infty}"),
+			}),
+
+			s("ldots", {
+				t("\\ldots")
+			}),
+
+			s("beg", {
+				t("\\begin{"), i(1, "environment"), t({ "}", "\t" }),
+				i(0),
+				t({ "", "\\end{" }), f(function(args) return args[1][1] end, { 1 }), t("}"),
+			}),
+
+			s("mk", {
+				t("$"), i(1), t("$"), i(2), f(function(args, snip)
+				local following = snip.env.TM_NEXT_TEXT or ""
+				if not string.match(following, "^[,%.%?%- ]") then
+					return " "
+				else
+					return ""
+				end
+			end, {}),
+				i(0),
+			}),
+
+			s("dm", {
+				t("$$"),
+				t({ "", "\t" }), i(1), t({ "", "$$" }),
+				t({ "", "\t" }), i(2),
+			}),
+
+			s("_", {
+				i(1, "letter"), t("_{"), i(2, "number"), t("}"), i(3)
+			}),
+
+
+			s({ trig = "([A-Za-z%d]+)sr", regTrig = true }, { -- Match letters or numbers followed by 'sr'
+				f(function(_, snip)
+					local var = snip.captures[1]               -- Capture the letter or number before 'sr'
+
+					return var .. "^2"                         -- Format as 'a^2' or '3^2'
+				end)
+			}),
+
+			s("tx", {
+				t("\\text{"), i(1, "text"), t("}")
+			}),
+
+			s({ trig = "//", regTrig = true }, { -- Trigger with "fr"
+				t("\\frac{"), i(1, "numerator"), t("}{"), i(2, "denominator"), t("}")
+			}),
+
+			s({ trig = "fall", regTrig = true }, { -- Trigger with "fall"
+				t("\\forall "), i(1, "letter"), t("\\in"), t("\\mathbb{"), i(2, "set"), t("}")
+			}),
+
+		}, { type = "autosnippets", key = "all_auto" })
+	end,
+}
