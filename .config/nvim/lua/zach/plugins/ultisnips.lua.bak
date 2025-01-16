@@ -1,0 +1,17 @@
+return {
+	-- Install UltiSnip plugin
+	{
+		"SirVer/ultisnips",
+		config = function()
+			-- Set up UltiSnip configurations here
+			vim.g.UltiSnipsExpandTrigger = "<tab>"      -- Trigger snippet expansion with Tab
+			vim.g.UltiSnipsJumpForwardTrigger = "<Tab>" -- Jump to next placeholder with Ctrl+j
+			vim.g.UltiSnipsJumpBackwardTrigger = "<s-Tab>" -- Jump to previous placeholder with Ctrl+k
+
+
+			-- Set the directory for UltiSnips snippets
+			vim.g.UltiSnipsSnippetDirectories = { "UltiSnips" }
+			vim.g.UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips" -- Customize path if needed
+		end,
+	},
+}
