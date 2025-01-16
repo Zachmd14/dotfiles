@@ -41,7 +41,7 @@ return {
 			ensure_installed = {
 				"ast-grep",
 				"stylua",
-				"texlab",
+				-- "texlab",
 				"cbfmt",
 				"prettier",
 			},
