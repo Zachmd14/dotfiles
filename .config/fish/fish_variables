@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export FZF_DEFAULT_OPTS:\x2d\x2dheight\x3d10\x25\x20\x2d\x2dlayout\x3dreverse\x20\x2d\x2dinfo\x3dinline\x20\x2d\x2dborder\x20\x2d\x2dmargin\x3d1\x20\x2d\x2dpadding\x3d1
 SETUVAR THEME_EDEN_PROMPT_CHAR:\u00bb
 SETUVAR VIRTUAL_ENV_DISABLE_PROMPT:true
 SETUVAR __fish_initialized:3400

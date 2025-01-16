@@ -5,7 +5,7 @@
 setxkbmap -option caps:escape
 
 # export fzf settigns
-export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --info=inline --border --margin=1 --padding=1"
+export FZF_DEFAULT_OPTS="--height=90% --layout=reverse --info=inline --border --margin=1 --padding=1 --preview 'bat --style=plain --color=always {}' --preview-window=right:55%"
 
 # Bob the fish config
 set -g theme_color_scheme dark
@@ -74,7 +74,6 @@ if status is-interactive
     abbr mvn-new 'mvn archetype:generate -DgroupId=com.example -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false -DartifactId='
     abbr td 'todoist-cli --color --indent'
     abbr tdday 'todoist-cli --color --indent l --filter today'
-
 		# abbr fastfetch 'fastfetch --logo-type none'
 		abbr config '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 		abbr gpom 'git push origin main'
@@ -85,10 +84,15 @@ if status is-interactive
 		abbr remind 'bash /home/zach/scripts/reminder.sh -t'
 		abbr history 'history | fzf | xclip -selection clipboard'
 		abbr commit 'git commit -m'
-		abbr nf 'nvim (fzf --tmux)'
-		abbr fzf 'fzf --tmux'
+		abbr nf 'nvim (fzf --tmux --height=90%)'
+		abbr fzf 'fzf --tmux --height=90%'
 		abbr color 'bash -c "$(wget -qO- https://git.io/vQgMr)"'
 		abbr com 'for cmd in (ls /usr/bin /bin /usr/local/bin); echo $cmd; end | fzf'
+		abbr nn '~/scripts/new_note.sh'
+		abbr sn 'cd "/home/zach/Documents/Obsidian/mainVault/6. School" ; set selected_file (fzf --tmux --height=90%) ; nvim $selected_file'
+		abbr hn 'clx -n'
+
+    abbr nvo 'cd "/home/zach/Documents/Obsidian/mainVault/" ; set selected_file (find . -type f -name "*.md" | fzf --tmux --height=90%) ; nvim $selected_file'
 end
 
 function fish_user_key_bindings
