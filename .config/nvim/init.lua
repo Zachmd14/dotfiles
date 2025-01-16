@@ -11,6 +11,9 @@ vim.wo.relativenumber = true
 -- Set conceallevel to 1
 vim.o.conceallevel = 1
 
+-- Correct last mispelled word
+vim.api.nvim_set_keymap('n', '<C-z>', '[s1z=', { noremap = true, silent = true })
+
 -- set keymaps for navigating
 vim.api.nvim_set_keymap('n', 'j', 'h', { noremap = true })
 vim.api.nvim_set_keymap('n', 'k', 'j', { noremap = true })
