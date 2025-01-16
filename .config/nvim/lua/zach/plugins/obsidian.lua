@@ -14,27 +14,32 @@ return {
 		-- Required.
 		"nvim-lua/plenary.nvim",
 
-		-- see below for full list of optional dependencies 👇
 	},
 	opts = {
+		disable_frontmatter = true,
+		sort_by = "accessed",
+		picker = {
+			name = "fzf-lua",
+			sort_reversed = true,
+		},
 		workspaces = {
 			{
 				name = "personal",
 				path = "~/Documents/Obsidian/mainVault/",
-				overrides = {
-					notes_subdir = "02 - Zettelkasten",
-				},
 			},
 
-			vim.keymap.set('n', '<leader>of', ':ObsidianFollowLink<CR>', {}),
+			vim.keymap.set('n', '<leader>of', ':ObsidianSearch<CR>', {}),
 			vim.keymap.set('n', '<leader>oq', ':ObsidianQuickSwitch<CR>', {}),
-			vim.keymap.set('n', '<leader>ot', ':ObsidianTOC<CR>', {}),
+			vim.keymap.set('n', '<leader>oo', ':ObsidianTOC<CR>', {}),
 			vim.keymap.set('n', '<leader>og', ':ObsidianTags<CR>', {}),
 			vim.keymap.set('n', '<leader>od', ':ObsidianToday<CR>', {}),
 			vim.keymap.set('n', '<leader>op', ':ObsidianPasteImg<CR>', {}),
-			vim.keymap.set('n', '<leader>or',
-				':call system("find ~/Documents/Obsidian/mainVault/ -type f | awk -v var=$(($RANDOM)) "NR==var {print $0}" | xargs nvim")<CR>',
-				{}),
+			vim.keymap.set('n', '<leader>ob', ':ObsidianBacklinks<CR>', {}),
+			vim.keymap.set('v', '<C-l>', [[:'<,'>ObsidianLinkNew<CR>]], { noremap = true, silent = true }),
+			vim.keymap.set('n', '<leader>ot', ':ObsidianTemplate<CR>', {}),
+			-- vim.keymap.set('n', '<leader>or',
+			-- ':call system("find ~/Documents/Obsidian/mainVault/ -type f | awk -v var=$(($RANDOM)) "NR==var {print $0}" | xargs nvim")<CR>',
+			-- {}),
 			vim.keymap.set('n', '<leader>on',
 				function()
 					local title = vim.fn.input('Enter note title: ')
@@ -66,14 +71,13 @@ return {
 		end,
 
 
-		new_notes_location = "current_dir",
 		attachments = {
-			img_folder = "~/Documents/Obsidian/mainVault/",
+			img_folder = "~/Documents/Obsidian/mainVault/files/",
 		},
 
 		daily_notes = {
 			-- Optional, if you keep daily notes in a separate directory.
-			folder = "01 - Daily Notes",
+			folder = "Daily",
 			-- Optional, if you want to change the date format for the ID of daily notes.
 			date_format = "%Y-%m-%d",
 			-- Optional, if you want to change the date format of the default alias of daily notes.
@@ -85,11 +89,20 @@ return {
 		},
 
 		templates = {
-			folder = "~/Documents/Obsidian/mainVault/99 -  Templates/",
+			folder = "~/Documents/Obsidian/mainVault/templates",
 			date_format = "%Y-%m-%d",
 			time_format = "%H:%M",
 			-- A map for custom variables, the key should be the variable and the value a function
 			substitutions = {},
 		},
+
+		wiki_link_func = function(opts)
+			return require("obsidian.util").wiki_link_path(opts)
+		end,
+
+		ui = {
+			enable = false, -- set to false to disable all additional syntax features
+		},
 	}
+
 }
