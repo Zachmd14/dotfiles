@@ -54,7 +54,7 @@ return {
 		lualine.setup({
 			options = {
 				-- theme = my_lualine_theme,
-				theme = "monokai-pro",
+				theme = "kanagawa",
 			},
 			sections = {
 				lualine_x = {
@@ -66,8 +66,7 @@ return {
 					{ "encoding" },
 					{ "fileformat" },
 					{ "filetype" },
-					{ prose.word_count,   cond = prose.is_available },
-					{ prose.reading_time, cond = prose.is_available },
+					{ prose.word_count, cond = prose.is_available },
 				},
 			},
 		})
