@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# If all your bars have ipc enabled, you can also use
-# polybar-msg cmd quit
+# Kill existing instances of Polybar
+killall -q polybar
 
-# Launch Polybar, using default config location ~/.config/polybar/config.ini
-polybar
+# Wait for Polybar to terminate
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+
+# Launch Polybar
+polybar &
