@@ -26,7 +26,7 @@ exec --no-startup-id dex --autostart --environment i3
 # start programs
 #unmute mic (hmmm acadomia)
 exec 'pactl set-source-mute alsa_input.pci-0000_00_1f.3.analog-stereo false'
-# launch dunst notification daemon
+exec '/home/zach/.config/polybar/launch.sh'
 exec 'killall dunst; dunst &'
 exec 'rfkill unblock wifi'
 exec 'sudo systemctl enable bluetooth.service'
@@ -34,7 +34,6 @@ exec '--no-startup-id xss-lock -- ~/.config/i3/lock.sh'
 exec "setxkbmap fr"
 exec "picom -b"
 exec "bash /home/zach/scripts/start_nitrogen.sh"
-exec "bash /home/zach/.config/polybar/launch.sh"
 exec "bash /home/zach/scripts/start_xidlehook.sh"
 exec "batsignal -w 25 -W Battery at warning level -c 10 -W Baterry at critical level"
 exec "xinput set-prop 9 'libinput Accel Speed' 0"
@@ -237,6 +236,8 @@ bindsym --release Print exec scrot '/home/zach/Pictures/Screenshots/%F.png' -e '
 bindsym --release $mod+Print exec scrot -s '/home/zach/Pictures/Screenshots/%F.png' -e 'xclip -selection clipboard -target image/png -i $f && notify-send "Screenshot taken"'
 bindsym $mod+XF86Display exec "xrandr --output eDP-1 --auto && bash /home/zach/.config/polybar/launch.sh"
 bindsym XF86Display exec "xrandr --output eDP-1 --off"
+bindsym $mod+b exec "/home/zach/scripts/hover_polybar.sh"
+
 
 # gaps config
 gaps inner 8
