@@ -35,6 +35,7 @@ return {
 			vim.keymap.set('n', '<leader>od', ':ObsidianToday<CR>', {}),
 			vim.keymap.set('n', '<leader>op', ':ObsidianPasteImg<CR>', {}),
 			vim.keymap.set('n', '<leader>ob', ':ObsidianBacklinks<CR>', {}),
+			vim.keymap.set('n', '<leader>ol', ':ObsidianLinks<CR>', {}),
 			vim.keymap.set('v', '<C-l>', [[:'<,'>ObsidianLinkNew<CR>]], { noremap = true, silent = true }),
 			vim.keymap.set('n', '<leader>ot', ':ObsidianTemplate<CR>', {}),
 			-- vim.keymap.set('n', '<leader>or',
@@ -103,6 +104,11 @@ return {
 		ui = {
 			enable = false, -- set to false to disable all additional syntax features
 		},
+
+		-- Follow URL
+		follow_url_func = function(url)
+			vim.fn.jobstart({ "xdg-open", url }) -- linux
+		end
 	}
 
 }
