@@ -243,10 +243,6 @@ bindsym $mod+b exec "/home/zach/scripts/hover_polybar.sh"
 gaps inner 8
 gaps top 0
 
-workspace 3 gaps inner 0
-workspace 3 gaps outer 0
-
-
 smart_gaps on
 # resize gaps
 bindsym $mod+o			gaps outer current plus 5
