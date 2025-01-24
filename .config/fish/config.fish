@@ -91,8 +91,8 @@ if status is-interactive
 		abbr nn '~/scripts/new_note.sh'
 		abbr sn 'cd "/home/zach/Documents/Obsidian/mainVault/6. School" ; set selected_file (fzf --tmux --height=90%) ; nvim $selected_file'
 		abbr hn 'clx -n'
-
     abbr nvo 'cd "/home/zach/Documents/Obsidian/mainVault/" ; set selected_file (find . -type f -name "*.md" | fzf --tmux --height=90%) ; nvim $selected_file'
+		abbr ts 'cd /home/zach/scripts/tmux-sessions/ && bash (fzf --tmux --height=90%)'
 end
 
 function fish_user_key_bindings
