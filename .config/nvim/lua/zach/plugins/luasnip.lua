@@ -21,6 +21,14 @@ return {
 
 		-- Snippets LaTeX (auto)
 		ls.add_snippets("tex", {
+			-- logarithme népérien
+			s("ln", { t("\\ln{("), i(1, "number"), t(")}") }),
+
+			-- flèche gauche-droite
+			s("rlarrow", { t("\\leftrightarrows") }),
+
+			-- flèche gauche-droite (double)
+			s("Lrarrow", { t("\\Leftrightarrow") }),
 			-- cube
 			s({ trig = "([A-Za-z%d]+)cb", regTrig = true, snippetType = "autosnippet" }, {
 				f(function(_, snip)
@@ -30,7 +38,7 @@ return {
 			}),
 
 			-- racine carrée
-			s("sqrt", { t("\\sqrt") }),
+			s("sqrt", { t("\\sqrt{"), i(0), t("}") }),
 
 			-- texte en gras
 			s("bf", { t("\\textbf{"), i(1, "text"), t("}") }),
