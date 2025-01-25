@@ -43,6 +43,7 @@ exec "tlp start"
 exec 'bash /home/zach/scripts/escape-key-bind.sh'
 exec 'xbindkeys'
 exec 'bash /home/scripts/auto_commit.sh'
+exec 'bash /home/scripts/auto_commit_school.sh'
 exec 'setxkbmap -option caps:escape'
 
 # exec "sudo ufw enable"
