@@ -89,7 +89,7 @@ if status is-interactive
 		abbr color 'bash -c "$(wget -qO- https://git.io/vQgMr)"'
 		abbr com 'for cmd in (ls /usr/bin /bin /usr/local/bin); echo $cmd; end | fzf'
 		abbr nn '~/scripts/new_note.sh'
-		abbr sn 'cd "/home/zach/Documents/Obsidian/mainVault/6. School" ; set selected_file (fzf --tmux --height=90%) ; nvim $selected_file'
+		abbr sn 'cd "/home/zach/Documents/Obsidian/schoolNotes/" ; set selected_file (fzf --tmux --height=90%) ; nvim $selected_file'
 		abbr hn 'clx -n'
     abbr nvo 'cd "/home/zach/Documents/Obsidian/mainVault/" ; set selected_file (find . -type f -name "*.md" | fzf --tmux --height=90%) ; nvim $selected_file'
 		abbr ts 'cd /home/zach/scripts/tmux-sessions/ && bash (fzf --tmux --height=90%)'
