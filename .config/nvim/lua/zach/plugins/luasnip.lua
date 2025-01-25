@@ -21,6 +21,9 @@ return {
 
 		-- Snippets LaTeX (auto)
 		ls.add_snippets("tex", {
+			-- logarithme népérien
+			s("ln", { t("\\ln{("), i(1, "number"), t(")}") }),
+
 			-- flèche gauche-droite
 			s("rlarrow", { t("\\leftrightarrows") }),
 
