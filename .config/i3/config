@@ -37,6 +37,8 @@ exec "bash /home/zach/scripts/start_nitrogen.sh"
 exec "bash /home/zach/scripts/start_xidlehook.sh"
 exec "batsignal -w 25 -W Battery at warning level -c 10 -W Baterry at critical level"
 exec "xinput set-prop 9 'libinput Accel Speed' 0"
+# Trackpoint below
+exec "xinput set-prop 10 'libinput Accel Speed' 13"
 exec "alternating_layouts.py"
 exec "unclutter -idle 0.5"
 exec "tlp start"
