@@ -115,8 +115,14 @@ return {
 
 		}, { type = "autosnippets", key = "all_auto" })
 
-		-- Snippets Markdown
+		-- Snippets Markdown manual
 		ls.add_snippets("markdown", {
+			-- code block
+			s("code", { t("```"), i(1, "language"), t({ "", "" }), i(2, "code"), t({ "", "" }), t("```") }),
+
+			-- note
+			s("note", { t("> [!note]"), t({ "", "" }), t("> "), i(1) }),
+
 			-- texte en gras
 			s("bold", { t("**"), i(1), t("**"), i(2) }),
 
@@ -129,6 +135,15 @@ return {
 			-- date
 			s("date", { f(function() return os.date("%Y-%m-%d") end) }),
 
+			-- Pour tout
+			s({ trig = "fall", regTrig = true, snippetType = "autosnippet" }, {
+				t("\\forall "), i(1, "letter"), t(" \\in \\mathbb{"), i(2, "set"), t("}")
+			})
+
+		})
+
+		-- Snippets for Markdown ( auto )
+		ls.add_snippets("markdown", {
 			-- boîte
 			s("tbox", { t("\\fbox{"), i(1, "text"), t("}") }),
 
@@ -172,7 +187,7 @@ return {
 			s("lm", { t("\\lim_{"), i(1, "set"), t(" \\to "), i(2, "plus ou moins"), t("\\infty}") }),
 
 			-- Indice
-			s("_", { t("_{"), i(1, "number"), t("}") }),
+			s("__", { t("_{"), i(1, "number"), t("}") }),
 
 			-- Exposant
 			s({ trig = "([A-Za-z%d]+)sr", regTrig = true, snippetType = "autosnippet" }, {
@@ -190,12 +205,11 @@ return {
 				t("\\frac{"), i(1, "numerator"), t("}{"), i(2, "denominator"), t("}")
 			}),
 
-			-- Pour tout
-			s({ trig = "fall", regTrig = true, snippetType = "autosnippet" }, {
-				t("\\forall "), i(1, "letter"), t(" \\in \\mathbb{"), i(2, "set"), t("}")
-			}),
+			-- code ``
+			s("cd", { t("`"), i(1), t("`") }),
 
-		})
+		}, { type = "autosnippets", key = "all_auto" })
+
 
 		-- Configuration de LuaSnip
 		ls.config.set_config({
