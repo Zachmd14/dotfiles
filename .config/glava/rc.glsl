@@ -34,7 +34,7 @@
               Has very little performance impact.
     
    "none"   - Disable window opacity completely. */
-#request setopacity "native"
+#request setopacity "none"
 
 /* Whether to mirror left and right audio input channels from PulseAudio.*/
 #request setmirror false
@@ -52,7 +52,7 @@
 
 /* Window background color (RGB format).
    Does not work with `setopacity "xroot"` */
-#request setbg 142025
+#request setbg 1f1f28
 
 /* (X11 only) EWMH Window type. Possible values are:
    
