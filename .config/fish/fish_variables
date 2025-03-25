@@ -3,7 +3,7 @@
 SETUVAR --export FZF_DEFAULT_OPTS:\x2d\x2dheight\x3d10\x25\x20\x2d\x2dlayout\x3dreverse\x20\x2d\x2dinfo\x3dinline\x20\x2d\x2dborder\x20\x2d\x2dmargin\x3d1\x20\x2d\x2dpadding\x3d1
 SETUVAR THEME_EDEN_PROMPT_CHAR:\u00bb
 SETUVAR VIRTUAL_ENV_DISABLE_PROMPT:true
-SETUVAR __fish_initialized:3400
+SETUVAR __fish_initialized:3800
 SETUVAR _tide_left_items:os\x1epwd\x1egit\x1enewline\x1echaracter
 SETUVAR _tide_right_items:status\x1ecmd_duration\x1econtext\x1ejobs\x1enode\x1epython\x1erustc\x1ejava\x1eruby\x1ego\x1etime
 SETUVAR fish_color_autosuggestion:brblack
@@ -23,7 +23,7 @@ SETUVAR fish_color_operator:brcyan
 SETUVAR fish_color_param:cyan
 SETUVAR fish_color_quote:yellow
 SETUVAR fish_color_redirection:cyan\x1e\x2d\x2dbold
-SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_search_match:white\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen

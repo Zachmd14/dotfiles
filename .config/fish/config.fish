@@ -37,6 +37,7 @@ if status is-interactive
     set -gx PATH $HOME/.local/bin $PATH
     set -gx PATH $HOME/usr/bin $PATH
     set -gx PATH /home/zach/Apps $PATH
+    set -gx PATH /home/zach/Desktop/ $PATH
 
     # Aliases
     abbr ls 'exa --icons --group-directories-first --sort=extension'
@@ -93,6 +94,7 @@ if status is-interactive
 		abbr hn 'clx -n'
     abbr nvo 'cd "/home/zach/Documents/Obsidian/mainVault/" ; set selected_file (find . -type f -name "*.md" | fzf --tmux --height=90%) ; nvim $selected_file'
 		abbr ts 'cd /home/zach/scripts/tmux-sessions/ && bash (fzf --tmux --height=90%)'
+		abbr pk 'fzf-kill'
 end
 
 function fish_user_key_bindings
