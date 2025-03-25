@@ -69,6 +69,11 @@ vim.api.nvim_set_keymap('n', 'c', '"_c', opts)
 vim.api.nvim_set_keymap('n', 'cc', '"_cc', opts)
 vim.api.nvim_set_keymap('v', 'c', '"_c', opts)
 
+-- set lang / set spelllang
+vim.api.nvim_set_keymap('n', '<Space>l', ':set spell<CR>', opts)
+vim.api.nvim_set_keymap('n', '<Space>lf', ':set spelllang=fr<CR>', opts)
+vim.api.nvim_set_keymap('n', '<Space>le', ':set spelllang=en<CR>', opts)
+
 -- Map '<leader>t to the todo plugin'
 -- vim.api.nvim_set_keymap('n', '<Space>t', ':Todo<CR>', opts)
 
