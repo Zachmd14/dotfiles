@@ -35,7 +35,8 @@ exec "setxkbmap fr"
 exec "picom -b"
 exec "bash /home/zach/scripts/start_nitrogen.sh"
 exec "bash /home/zach/scripts/start_xidlehook.sh"
-exec "batsignal -w 25 -W Battery at warning level -c 10 -W Baterry at critical level"
+exec "batsignal -w 25 -W Battery at warning level -c 10 -W Baterry at low level"
+exec "batsignal -w 5 -W Battery at warning level -c 10 -W Baterry at critical level && ~/scripts/suspend.sh"
 exec "xinput set-prop 9 'libinput Accel Speed' 0"
 # Trackpoint below
 exec "xinput set-prop 10 'libinput Accel Speed' 13"
@@ -230,7 +231,8 @@ bindsym $mod+control+m resize shrink width 1 px or 1 ppt
 #}
 
 # Custom shortcuts
-bindsym $mod+space exec "bash /home/zach/scripts/rofi-launcher.sh"
+# bindsym $mod+space exec "bash /home/zach/scripts/rofi-launcher.sh"
+bindsym $mod+space exec "rofi -show drun"
 bindsym XF86MonBrightnessDown exec backlight_control -10
 bindsym XF86MonBrightnessUp exec backlight_control +10
 bindsym Home exec "bash ~/scripts/lock.sh"
@@ -240,7 +242,11 @@ bindsym --release $mod+Print exec scrot -s '/home/zach/Pictures/Screenshots/%F.p
 bindsym $mod+XF86Display exec "xrandr --output eDP-1 --auto && bash /home/zach/.config/polybar/launch.sh"
 bindsym XF86Display exec "xrandr --output eDP-1 --off"
 bindsym $mod+b exec "/home/zach/scripts/hover_polybar.sh"
-
+bindsym $mod+g exec "/home/zach/scripts/greyscale-screen.sh"
+bindsym $mod+t exec "/home/zach/scripts/hover_trayer.sh"
+bindsym $mod+Shift+p exec "playerctl play-pause"
+bindsym $mod+Shift+n exec "playerctl next"
+bindsym $mod+Shift+b exec "playerctl previous"
 
 # gaps config
 gaps inner 8
