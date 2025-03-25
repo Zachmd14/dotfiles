@@ -27,6 +27,10 @@ return {
 				name = "personal",
 				path = "~/Documents/Obsidian/mainVault/",
 			},
+			{
+				name = "school",
+				path = "~/Documents/Obsidian/schoolNotes/",
+			},
 
 			vim.keymap.set('n', '<leader>of', ':ObsidianSearch<CR>', {}),
 			vim.keymap.set('n', '<leader>oq', ':ObsidianQuickSwitch<CR>', {}),
@@ -38,6 +42,7 @@ return {
 			vim.keymap.set('n', '<leader>ol', ':ObsidianLinks<CR>', {}),
 			vim.keymap.set('v', '<C-l>', [[:'<,'>ObsidianLinkNew<CR>]], { noremap = true, silent = true }),
 			vim.keymap.set('n', '<leader>ot', ':ObsidianTemplate<CR>', {}),
+			vim.keymap.set('n', '<leader>ow', ':ObsidianWorkspace<CR>', {}),
 			-- vim.keymap.set('n', '<leader>or',
 			-- ':call system("find ~/Documents/Obsidian/mainVault/ -type f | awk -v var=$(($RANDOM)) "NR==var {print $0}" | xargs nvim")<CR>',
 			-- {}),

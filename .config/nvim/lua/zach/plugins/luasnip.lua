@@ -70,7 +70,7 @@ return {
 			s('_', { t('_{'), i(1, 'subscript'), t('}') }, { snippetType = 'autosnippet' }),
 
 			-- Superscript
-			s({ trig = '([%w%)%]%}])sr', regTrig = true }, {
+			s({ trig = '([%w%)%]%}])srr', regTrig = true }, {
 				f(function(_, snip) return snip.captures[1] end),
 				t('^2')
 			}, { snippetType = 'autosnippet' }),
@@ -148,7 +148,7 @@ return {
 			-- Indice
 			s("__", { t("_{"), i(1, "number"), t("}") }),
 			-- Exposant
-			s({ trig = "([A-Za-z%d]+)sr", regTrig = true, snippetType = "autosnippet" }, {
+			s({ trig = "([A-Za-z%d]+)srr", regTrig = true, snippetType = "autosnippet" }, {
 				f(function(_, snip)
 					local var = snip.captures[1]
 					return var .. "^2"
