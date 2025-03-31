@@ -21,7 +21,7 @@ else
     pkill picom
     picom --backend glx --window-shader-fg "$SHADER_PATH" &
 		# nitrogen --set-tiled ~/Pictures/wallpaper/GdErUjnXAAAsR7i.jpg
-		nitrogen --set-tiled ~/Pictures/wallpaper/keyboard_wallpaper_greyscale.jpg
+		nitrogen --set-tiled ~/Pictures/wallpaper/GdErUjnXAAAsR7i.jpg
 fi
 
 # Force a redraw of all visible windows to apply the changes
