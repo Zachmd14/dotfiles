@@ -38,6 +38,7 @@ if status is-interactive
     set -gx PATH $HOME/usr/bin $PATH
     set -gx PATH /home/zach/Apps $PATH
     set -gx PATH /home/zach/Desktop/ $PATH
+		set -gx PROTON "/usr/share/steam/compatibilitytools.d/proton_tkg_makepkg/proton"
 
     # Aliases
     abbr ls 'exa --icons --group-directories-first --sort=extension'
