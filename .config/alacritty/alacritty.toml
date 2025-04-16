@@ -1,7 +1,7 @@
 [general]
 import = [
-    "~/.config/alacritty/themes/ayu_dark.toml"
+    "~/.config/alacritty/theme/gruvbox.toml"
 ]
 
 [font]
-normal = {family = "JetBrainsMono Nerd Font", style = "Bold"}
+normal = {family = "JetBrainsMono Nerd Font", style = "semibold"}
