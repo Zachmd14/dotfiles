@@ -14,7 +14,7 @@ vec4 window_shader() {
     float gray = 0.2126 * color.r + 0.7152 * color.g + 0.0722 * color.b;
 
     // Increase contrast
-    float contrast = 1.08; // Adjust this value to control contrast (1.0 = no change)
+    float contrast = 1; // Adjust this value to control contrast (1.0 = no change)
     gray = (gray - 0.5) * contrast + 0.5;
 
     // Clamp the result to avoid overshooting
