@@ -3,7 +3,7 @@ Description=Redshift - Adjust screen temperature
 After=network.target geoclue-agent.service
 
 [Service]
-ExecStart=/usr/bin/redshift
+ExecStart=/usr/bin/redshift -t 6500:3000
 Restart=on-failure
 RestartSec=5
 
