@@ -115,5 +115,9 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- enable true colors
 vim.opt.termguicolors = true
+
+-- Fix Shift key repeat in Wayland
+vim.opt.langmap = ""
+
 -- Load the plugins
 require("zach.lazy")
