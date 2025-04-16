@@ -3,8 +3,20 @@ return {
 	opts = {
 		dashboard = {
 			sections = {
-				{ section = "header", padding = 5 },
-				{ section = "keys",   gap = 1,    padding = 1 },
+				-- { section = "header", padding = 5 },
+				{
+					section = "terminal",
+					cmd =
+					'chafa -p off --speed=0.6 --clear --passthrough=tmux --scale max "$HOME/Downloads/kirby_dance.gif"',
+					indent = 12,
+					ttl = 0,
+					enabled = function()
+						return vim.fn.executable("chafa") == 1 and vim.fn.environ()["SSH_CLIENT"] == nil
+					end,
+					height = 20,
+					padding = 1,
+				},
+				{ section = "keys",   gap = 1, padding = 1 },
 				{
 					action = ":ObsidianQuickSwitch",
 					key = "o",
@@ -50,19 +62,6 @@ return {
 		-- Open the window with the created buffer
 		win = vim.api.nvim_open_win(buf, true, opts)
 		vim.api.nvim_win_set_option(win, "cursorline", true)
-	end,
-
-	-- Function to load the file into the buffer
-	view = function()
-		vim.api.nvim_buf_set_option(buf, "modifiable", true)
-
-		-- Get the full path to the file within your runtime path
-		local file_path = vim.api.nvim_get_runtime_file("~/Documents/Obsidian/mainVault/TODO.md", false)[1]
-
-		-- Use the $read command to insert the file's contents into the buffer
-		vim.api.nvim_command("$read " .. file_path)
-
-		vim.api.nvim_buf_set_option(buf, "modifiable", false)
 	end,
 
 	-- Combined function to open the floating window and view the file

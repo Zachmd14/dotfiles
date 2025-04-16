@@ -103,6 +103,12 @@ return {
 			s("tip", { t("> [!tip]"), t({ "", "" }), t("> "), i(1) }),
 			-- date
 			s("date", { f(function() return os.date("%Y-%m-%d") end) }),
+			-- Math environment
+			s('beg', {
+				t('\\begin{'), i(1, 'environment'), t('}'),
+				t({ '', '\t' }), i(0),
+				t({ '', '\\end{' }), f(function(args) return args[1][1] end, { 1 }), t('}')
+			}),
 			-- Pour tout
 			s({ trig = "fall", regTrig = true, snippetType = "autosnippet" }, {
 				t("\\forall "), i(1, "letter"), t(" \\in \\mathbb{"), i(2, "set"), t("}")
