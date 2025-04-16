@@ -89,9 +89,9 @@ bindsym $mod+u exec obsidian
 bindsym $mod+n exec --no-startup-id sh -c "kitty -e nvim"
 
 # Change screen layout
-bindsym $mod+Shift+s exec bash /home/zach/scripts/desk-screen-layout.sh && notify-send -t 5000 "Desk screen layout set"
-bindsym $mod+Ctrl+s exec bash /home/zach/scripts/laptop-screen-layout.sh && notify-send -t 5000 "Laptop screen layout set"
-bindsym $mod+Shift+q exec bash /home/zach/scripts/two-screens-layout.sh && notify-send -t 5000 "Two screens layout set"
+bindsym $mod+Shift+s exec bash /home/zach/scripts/layout/desk-screen-layout.sh && notify-send -t 5000 "Desk screen layout set"
+bindsym $mod+Ctrl+s exec bash /home/zach/scripts/layout/laptop-screen-layout.sh && notify-send -t 5000 "Laptop screen layout set"
+bindsym $mod+Shift+q exec bash /home/zach/scripts/layout/two-screens-layout.sh && notify-send -t 5000 "Two screens layout set"
 
 # kill focused window
 bindsym $mod+q kill
@@ -247,7 +247,7 @@ bindsym $mod+t exec "/home/zach/scripts/hover_trayer.sh"
 bindsym $mod+Shift+p exec "playerctl play-pause"
 bindsym $mod+Shift+n exec "playerctl next"
 bindsym $mod+Shift+b exec "playerctl previous"
-
+bindsym $mod+Shift+w exec "/home/zach/scripts/layout/wallpaper.fish"
 # gaps config
 gaps inner 8
 gaps top 0
