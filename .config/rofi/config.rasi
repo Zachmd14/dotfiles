@@ -1,6 +1,6 @@
 configuration {
-    font: "Envy Code R 10";
-    line-margin: 10;
+    font: "JetBrains Mono 12";
+    line-margin: 1;
 
     display-ssh:    "";
     display-run:    "";
@@ -8,9 +8,16 @@ configuration {
     display-window: "";
     display-combi:  "";
     show-icons:     true;
+
+		animate-in: "slide-down";
+    animate-out: "slide-up";
+    animation-speed: 20;  // 0 (fast) → 100 (slow)
+    animation-close: "slide-up";
+    animation-open: "slide-down";
+    y-offset: -100%;     // Starts above screen
 }
 
-@theme "~/.config/rofi/kanagawa.rasi"
+@theme "~/.config/rofi/gruvbox.rasi"
 listview {
 	lines: 6;
 	columns: 2;
