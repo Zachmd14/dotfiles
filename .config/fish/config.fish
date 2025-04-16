@@ -2,7 +2,7 @@
 # ~/.config/fish/config.fish
 
 # set caps lock as escape
-setxkbmap -option caps:escape
+# setxkbmap -option caps:escape
 
 # export fzf settigns
 export FZF_DEFAULT_OPTS="--height=90% --layout=reverse --info=inline --border --margin=1 --padding=1 --preview 'bat --style=plain --color=always {}' --preview-window=right:55%"
@@ -83,7 +83,7 @@ if status is-interactive
 		abbr wifi 'nmtui'
 		abbr rsync 'rsync --progress'
 		abbr landscape 'bash ~/scripts/landscape-gif.sh'
-		abbr remind 'bash /home/zach/scripts/reminder.sh -t'
+		abbr remind 'bash /home/zach/scripts/reminder.sh -'
 		abbr history 'history | fzf | xclip -selection clipboard'
 		abbr commit 'git commit -m'
 		abbr nf 'nvim (fzf --tmux --height=90%)'
