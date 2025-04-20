@@ -1,3 +1,6 @@
+local ltw = require("little-taskwarrior")
+ltw.setup({})
+
 return {
 	"folke/snacks.nvim",
 	opts = {
@@ -7,7 +10,7 @@ return {
 				{
 					section = "terminal",
 					cmd =
-					'chafa -p off --speed=0.6 --clear --passthrough=tmux --scale max "$HOME/Downloads/kirby_dance.gif"',
+					'chafa -p off --speed=1 --clear --passthrough=tmux --scale max "$HOME/.config/nvim/toad_dancing.gif"',
 					indent = 12,
 					ttl = 0,
 					enabled = function()
@@ -16,17 +19,35 @@ return {
 					height = 20,
 					padding = 1,
 				},
-				{ section = "keys",   gap = 1, padding = 1 },
 				{
-					action = ":ObsidianQuickSwitch",
-					key = "o",
-					desc = "Open Obsidian Note",
-					icon = " ",
-					gap = 1,
-					padding = 1,
+					icon = "",
+					title = "Little TaskWarrior",
 				},
-				-- { pane = 2, icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
+				{
+					text = ltw.get_snacks_dashboard_tasks(56, "dir", "special"),
+					indent = 2,
+				},
 				{ section = "startup" },
+				{
+					pane = 2,
+					{
+						{
+							action = ":ObsidianQuickSwitch",
+							key = "o",
+							desc = "Open Obsidian Note",
+							icon = " ",
+							gap = 1,
+							padding = 1,
+						},
+						{ section = "keys", gap = 1, padding = 1 },
+						-- { pane = 2, icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
+						{
+							section = "recent_files",
+							title = "Recents files",
+							limit = 8,
+						},
+					}
+				}
 			},
 		},
 	},
