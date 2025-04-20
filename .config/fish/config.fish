@@ -34,10 +34,11 @@ if status is-interactive
     set -g fish_greeting ""
 
     # Add directories to PATH
+		set -gx PATH /usr/local/bin/ $PATH
     set -gx PATH $HOME/.local/bin $PATH
     set -gx PATH $HOME/usr/bin $PATH
-    set -gx PATH /home/zach/Apps $PATH
-    set -gx PATH /home/zach/Desktop/ $PATH
+    set -gx PATH $HOME/Apps $PATH
+    set -gx PATH $HOME/Desktop/ $PATH
 		set -gx PROTON "/usr/share/steam/compatibilitytools.d/proton_tkg_makepkg/proton"
 
     # Aliases
@@ -96,6 +97,7 @@ if status is-interactive
     abbr nvo 'cd "/home/zach/Documents/Obsidian/mainVault/" ; set selected_file (find . -type f -name "*.md" | fzf --tmux --height=90%) ; nvim $selected_file'
 		abbr ts 'cd /home/zach/scripts/tmux-sessions/ && bash (fzf --tmux --height=90%)'
 		abbr pk 'fzf-kill'
+		abbr tk 'task'
 end
 
 function fish_user_key_bindings
