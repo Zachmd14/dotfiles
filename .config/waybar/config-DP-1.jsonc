@@ -7,10 +7,11 @@
     "spacing": 1,
     "modules-left": [
       "hyprland/workspaces",
+			"custom/tasks",
       // "tray",
 			"custom/uair",
-      "bluetooth",
-      "hyprland/window"
+      "bluetooth"
+      // "hyprland/window"
     ],
     "modules-center": [
 			"clock"
@@ -28,11 +29,15 @@
       "pulseaudio"
       // "clock"
     ],
-    
     "hyprland/workspaces": {
         "format": "{name}",
 				"all-outputs": true
     },
+		"custom/tasks": {
+			"exec": "~/scripts/get-task-title.sh",
+			"interval": 60,
+			"format": " {}  "
+		},
     "bluetooth": {
         "format-on": "bt ",
         "format-off": "bt ({status}) ",
