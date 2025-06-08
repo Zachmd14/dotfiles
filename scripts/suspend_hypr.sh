@@ -1,3 +1,3 @@
 #!/bin/bash
 
-systemctl suspend; exit
+hyprlock && systemctl suspend; exit
