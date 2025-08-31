@@ -1,0 +1,10 @@
+@define-color color_bg #000000;
+
+box, menubar {
+    background-color: @color_bg;
+    font-family: "Fira Code"
+}
+
+.workspace .item {
+    color: @color_bg;
+}

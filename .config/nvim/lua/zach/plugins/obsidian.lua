@@ -31,6 +31,10 @@ return {
 				name = "school",
 				path = "~/Documents/Obsidian/schoolNotes/",
 			},
+			{
+				name = "website",
+				path = "~/Documents/Obsidian/WebsitePubsidian/",
+			},
 
 			vim.keymap.set('n', '<leader>of', ':ObsidianSearch<CR>', {}),
 			vim.keymap.set('n', '<leader>oq', ':ObsidianQuickSwitch<CR>', {}),
@@ -83,7 +87,7 @@ return {
 
 		daily_notes = {
 			-- Optional, if you keep daily notes in a separate directory.
-			folder = "Daily",
+			folder = "0. Daily",
 			-- Optional, if you want to change the date format for the ID of daily notes.
 			date_format = "%Y-%m-%d",
 			-- Optional, if you want to change the date format of the default alias of daily notes.
@@ -91,7 +95,7 @@ return {
 			-- Optional, default tags to add to each new daily note created.
 			default_tags = { "daily-notes" },
 			-- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
-			template = "Daily template"
+			template = "Daily Note Template"
 		},
 
 		templates = {

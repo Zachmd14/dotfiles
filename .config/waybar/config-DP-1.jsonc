@@ -1,27 +1,27 @@
+
 {
 	  "output": "DP-1",
     "layer": "top",
     "position": "top",
-    "height": 30,
+    "height": 20,
     "width": 1920,
     "spacing": 1,
     "modules-left": [
       "hyprland/workspaces",
-			"custom/tasks",
       // "tray",
-			"custom/uair",
-      "bluetooth"
+			// "custom/uair",
+      // "bluetooth"
       // "hyprland/window"
+	  "clock"
     ],
     "modules-center": [
-			"clock"
     ],
     "modules-right": [
       //"idle_inhibitor",
       //"custom/kernel",
       //"disk#ssd",
-      "mpris",
-      "custom/weather",
+      // "mpris",
+      // "custom/weather",
       "network",
       //"cpu",
       //"memory",
@@ -30,14 +30,9 @@
       // "clock"
     ],
     "hyprland/workspaces": {
-        "format": "{name}",
-				"all-outputs": true
+      "format": "[{name}]",
+      "all-outputs": true
     },
-		"custom/tasks": {
-			"exec": "~/scripts/get-task-title.sh",
-			"interval": 60,
-			"format": " {}  "
-		},
     "bluetooth": {
         "format-on": "bt ",
         "format-off": "bt ({status}) ",
@@ -80,30 +75,8 @@
     },
     "clock": {
         "interval": 1,
-        // "timezone": "America/São Paulo",
-		"format": "{:%T %d/%m }",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-                    "mode"          : "year",
-                    "mode-mon-col"  : 3,
-                    "weeks-pos"     : "right",
-                    "on-scroll"     : 1,
-                    "on-click-right": "mode",
-                    "format": {
-                              "months":     "<span color='#EEB633'><b>{}</b></span>",
-                              "days":       "<span color='#bdae93'><b>{}</b></span>",
-                              "weeks":      "<span color='#458588'>W{}</span>",
-                              "weekdays":   "<span color='#f8e2af'><b>{}</b></span>",
-                              "today":      "<span color='#98971a'><b><u>{}</u></b></span>"
-                              }
-                    },
-        "actions":  {
-                    "on-click-right": "mode",
-                    "on-click-forward": "tz_up",
-                    "on-click-backward": "tz_down",
-                    "on-scroll-up": "shift_down",
-                    "on-scroll-down": "shift_up"
-                    }
+        // "timezone": "Europe/Paris",
+		"format": "[{:%T %d/%m}]",
     },
     "cpu": {
         "interval": 3,
@@ -141,7 +114,7 @@
         "interface-ethernet": "enp1s*",
         "interface-wifi": "wlan0",
         "format-ethernet": "eth ",
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "[WIFI: {essid} ({signalStrength}%)]",
         "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "tooltip-format-wifi": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "(No IP) ",
@@ -152,10 +125,10 @@
             "warning": 30,
             "critical": 15
         },
-        "format": " {capacity}%  ",
-        "format-full": " {capacity}%   ",
-        "format-charging": " {capacity}%+  ",
-        "format-plugged": " {capacity}%   "
+        "format": "[BAT: {capacity}%]",
+        "format-full": "[BAT full: {capacity}%]",
+        "format-charging": "[BAT charging: {capacity}%]",
+        "format-plugged": "[BAT plugged: {capacity}%]"
     },
     "custom/uair": {
       "format": " {text}",
@@ -181,12 +154,10 @@
     },
     "pulseaudio": {
         "scroll-step": 5,
-        "format": "{volume}%  {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format": "[VOL: {volume}% / {format_source}]",
+        "format-muted": "[VOL: muted / {format_source}]",
+        "format-source": "MIC: open",
+        "format-source-muted": "MIC: closed",
         "format-icons": {
             "headphone": " ",
             "hands-free": "",
@@ -216,5 +187,13 @@
       "on-click": "swaync-client -t -sw",
       "on-click-right": "swaync-client -d -sw",
       "escape": true
+    },
+    "custom/right-bracket": {
+        "format": "]",
+        "tooltip": false
+    },
+    "custom/left-bracket": {
+        "format": "{",
+        "tooltip": false
     }
 }

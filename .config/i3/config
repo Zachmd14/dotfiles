@@ -48,6 +48,7 @@ exec 'xbindkeys'
 exec 'bash /home/scripts/auto_commit.sh'
 exec 'bash /home/scripts/auto_commit_school.sh'
 exec 'setxkbmap -option caps:escape'
+exec 'bash /home/zach/dotfiles/scripts/org-roam-backup.sh'
 
 # exec "sudo ufw enable"
 # exec "sudo systemctl start sshd"

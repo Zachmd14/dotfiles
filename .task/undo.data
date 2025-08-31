@@ -1,0 +1,318 @@
+time 1745009720
+new [description:"lol" entry:"1745009720" modified:"1745009720" status:"pending" uuid:"5faa2a95-c1d4-4252-8962-37a25ae86dba"]
+---
+time 1745009756
+new [description:"test win" entry:"1745009748" modified:"1745009748" status:"pending" uuid:"18cec3e7-6ee0-4c40-839e-2052055a5109"]
+---
+time 1745012297
+new [description:"test for school" entry:"1745012297" modified:"1745012297" status:"pending" uuid:"24239af2-97aa-4645-83b5-50f788a21cd5"]
+---
+time 1745012748
+old [description:"lol" entry:"1745009720" modified:"1745009720" status:"pending" uuid:"5faa2a95-c1d4-4252-8962-37a25ae86dba"]
+new [description:"lol" end:"1745012748" entry:"1745009720" modified:"1745012748" status:"completed" uuid:"5faa2a95-c1d4-4252-8962-37a25ae86dba"]
+---
+time 1745012749
+old [description:"test win" entry:"1745009748" modified:"1745009748" status:"pending" uuid:"18cec3e7-6ee0-4c40-839e-2052055a5109"]
+new [description:"test win" end:"1745012749" entry:"1745009748" modified:"1745012749" status:"completed" uuid:"18cec3e7-6ee0-4c40-839e-2052055a5109"]
+---
+time 1745012750
+old [description:"test for school" entry:"1745012297" modified:"1745012297" status:"pending" uuid:"24239af2-97aa-4645-83b5-50f788a21cd5"]
+new [description:"test for school" end:"1745012750" entry:"1745012297" modified:"1745012750" status:"completed" uuid:"24239af2-97aa-4645-83b5-50f788a21cd5"]
+---
+time 1745013846
+new [description:"Clean installed Flatpack packages" entry:"1745013846" modified:"1745013846" project:"IT" status:"pending" uuid:"6245200a-01bd-42f5-90d1-1e70536291ae"]
+---
+time 1745014032
+new [description:"Clean installed Flatpack packages Arch" entry:"1745014032" modified:"1745014032" status:"pending" tags:"Computer" tags_Computer:"x" uuid:"0893a6c6-84df-459a-a2a4-074743061367"]
+---
+time 1745014494
+old [description:"Clean installed Flatpack packages" entry:"1745013846" modified:"1745013846" project:"IT" status:"pending" uuid:"6245200a-01bd-42f5-90d1-1e70536291ae"]
+new [description:"Clean installed Flatpack packages" end:"1745014494" entry:"1745013846" modified:"1745014494" project:"IT" status:"completed" uuid:"6245200a-01bd-42f5-90d1-1e70536291ae"]
+---
+time 1745014739
+new [description:"Check for a TaskWarrior Waybar plugin\nNice if it show a list of the tasks on hover like the weather plugin" entry:"1745014739" modified:"1745014739" status:"pending" tags:"Computer" tags_Computer:"x" uuid:"9987cb20-e964-4510-9cb0-21a3ec999ecf"]
+---
+time 1745014775
+old [description:"Check for a TaskWarrior Waybar plugin\nNice if it show a list of the tasks on hover like the weather plugin" entry:"1745014739" modified:"1745014739" status:"pending" tags:"Computer" tags_Computer:"x" uuid:"9987cb20-e964-4510-9cb0-21a3ec999ecf"]
+new [description:"Check for a TaskWarrior Waybar plugin\nNice if it show a list of the tasks on hover like the weather plugin" due:"1745100000" entry:"1745014739" modified:"1745014775" status:"pending" tags:"Computer" tags_Computer:"x" uuid:"9987cb20-e964-4510-9cb0-21a3ec999ecf"]
+---
+time 1745050800
+new [description:"gros caca" due:"1745013600" entry:"1745050578" modified:"1745050578" priority:"L" status:"pending" uuid:"39d31177-7cf5-41c2-9acc-2f84a8a38dd6"]
+---
+time 1745051119
+new [description:"Recharger la garmin" entry:"1745051119" modified:"1745051119" priority:"H" status:"pending" tags:"School" tags_School:"x" uuid:"0804c953-abf3-48d7-a8fb-f5dd975fcf5d"]
+---
+time 1745051433
+new [description:"Recharger la calculatrice" entry:"1745051433" modified:"1745051433" priority:"H" status:"pending" tags:"School" tags_School:"x" uuid:"6c7a509f-9c3b-4b86-8fcb-552bf30b9ac9"]
+---
+time 1745051701
+old [description:"gros caca" due:"1745013600" entry:"1745050578" modified:"1745050578" priority:"L" status:"pending" uuid:"39d31177-7cf5-41c2-9acc-2f84a8a38dd6"]
+new [description:"gros caca" due:"1745013600" end:"1745051468" entry:"1745050578" modified:"1745051468" priority:"L" status:"completed" uuid:"39d31177-7cf5-41c2-9acc-2f84a8a38dd6"]
+---
+time 1745051701
+old [description:"Check for a TaskWarrior Waybar plugin\nNice if it show a list of the tasks on hover like the weather plugin" due:"1745100000" entry:"1745014739" modified:"1745014775" status:"pending" tags:"Computer" tags_Computer:"x" uuid:"9987cb20-e964-4510-9cb0-21a3ec999ecf"]
+new [description:"Check for a TaskWarrior Waybar plugin\nNice if it show a list of the tasks on hover like the weather plugin" due:"1745013600" entry:"1745014739" modified:"1745051494" status:"pending" tags:"Computer" tags_Computer:"x" uuid:"9987cb20-e964-4510-9cb0-21a3ec999ecf"]
+---
+time 1745051701
+old [description:"Recharger la garmin" entry:"1745051119" modified:"1745051119" priority:"H" status:"pending" tags:"School" tags_School:"x" uuid:"0804c953-abf3-48d7-a8fb-f5dd975fcf5d"]
+new [description:"Recharger la garmin" due:"1745013600" entry:"1745051119" modified:"1745051525" priority:"H" status:"pending" tags:"School" tags_School:"x" uuid:"0804c953-abf3-48d7-a8fb-f5dd975fcf5d"]
+---
+time 1745051966
+new [description:"Réviser les intégrales" due:"1745013600" entry:"1745051966" modified:"1745051966" project:"School.Maths" status:"pending" uuid:"a6a8d970-fb22-4826-8707-c40b000478ef"]
+---
+time 1745051995
+new [description:"Réviser les primitives" due:"1745013600" entry:"1745051995" modified:"1745051995" project:"School.Maths" status:"pending" uuid:"6dc0d409-0b64-457d-bfe6-fddde73a0f5f"]
+---
+time 1745052010
+new [description:"Réviser les dérivées de fonctions" due:"1745013600" entry:"1745052010" modified:"1745052010" project:"School.Maths" status:"pending" uuid:"c7440c30-73a1-4bd6-849f-3e416361758b"]
+---
+time 1745052075
+new [description:"Faire les sujets de BAC donné par le prof" due:"1745100000" entry:"1745052075" modified:"1745052075" project:"School.Maths" status:"pending" uuid:"f4ba289b-1518-4992-a86e-bb1b49566b54"]
+---
+time 1745053831
+new [description:"Resolve screen recording issue with hyprland" entry:"1745053831" modified:"1745053831" priority:"M" project:"Computer" status:"pending" uuid:"5a9a931a-dd08-4a62-be37-c6e3c39c1c76"]
+---
+time 1745053849
+old [description:"Recharger la calculatrice" entry:"1745051433" modified:"1745051433" priority:"H" status:"pending" tags:"School" tags_School:"x" uuid:"6c7a509f-9c3b-4b86-8fcb-552bf30b9ac9"]
+new [description:"Recharger la calculatrice" end:"1745053849" entry:"1745051433" modified:"1745053849" priority:"H" status:"completed" tags:"School" tags_School:"x" uuid:"6c7a509f-9c3b-4b86-8fcb-552bf30b9ac9"]
+---
+time 1745056592
+old [description:"Réviser les intégrales" due:"1745013600" entry:"1745051966" modified:"1745051966" project:"School.Maths" status:"pending" uuid:"a6a8d970-fb22-4826-8707-c40b000478ef"]
+new [description:"Réviser les intégrales" due:"1745013600" end:"1745056592" entry:"1745051966" modified:"1745056592" project:"School.Maths" status:"completed" uuid:"a6a8d970-fb22-4826-8707-c40b000478ef"]
+---
+time 1745056625
+new [description:"Réviser les proba" due:"1745100000" entry:"1745056625" modified:"1745056625" project:"School.Maths" status:"pending" uuid:"33e4aab2-c1c5-489b-ab89-6fd810620f82"]
+---
+time 1745056641
+new [description:"Réviser les limites de fonctions" due:"1745100000" entry:"1745056641" modified:"1745056641" project:"School.Maths" status:"pending" uuid:"f23a6a6a-a7f7-4623-a101-ad046b042fc3"]
+---
+time 1745056737
+new [description:"Réviser produit scalaire et géométrie dans l'espace" due:"1745186400" entry:"1745056737" modified:"1745056737" project:"School.Maths" status:"pending" uuid:"793ed711-8fe5-4b96-9d36-145f575858dd"]
+---
+time 1745056763
+old [description:"Réviser les primitives" due:"1745013600" entry:"1745051995" modified:"1745051995" project:"School.Maths" status:"pending" uuid:"6dc0d409-0b64-457d-bfe6-fddde73a0f5f"]
+new [description:"Réviser les primitives" due:"1745013600" end:"1745056763" entry:"1745051995" modified:"1745056763" project:"School.Maths" status:"completed" uuid:"6dc0d409-0b64-457d-bfe6-fddde73a0f5f"]
+---
+time 1745065501
+old [description:"Check for a TaskWarrior Waybar plugin\nNice if it show a list of the tasks on hover like the weather plugin" due:"1745013600" entry:"1745014739" modified:"1745051494" status:"pending" tags:"Computer" tags_Computer:"x" uuid:"9987cb20-e964-4510-9cb0-21a3ec999ecf"]
+new [description:"Check for a TaskWarrior Waybar plugin\nNice if it show a list of the tasks on hover like the weather plugin" due:"1745013600" entry:"1745014739" modified:"1745062982" project:"Computer" status:"pending" tags:"Computer" tags_Computer:"x" uuid:"9987cb20-e964-4510-9cb0-21a3ec999ecf"]
+---
+time 1745065501
+old [description:"Clean installed Flatpack packages Arch" entry:"1745014032" modified:"1745014032" status:"pending" tags:"Computer" tags_Computer:"x" uuid:"0893a6c6-84df-459a-a2a4-074743061367"]
+new [description:"Clean installed Flatpack packages Arch" entry:"1745014032" modified:"1745062986" project:"Computer" status:"pending" tags:"Computer" tags_Computer:"x" uuid:"0893a6c6-84df-459a-a2a4-074743061367"]
+---
+time 1745065501
+old [description:"Recharger la garmin" due:"1745013600" entry:"1745051119" modified:"1745051525" priority:"H" status:"pending" tags:"School" tags_School:"x" uuid:"0804c953-abf3-48d7-a8fb-f5dd975fcf5d"]
+new [description:"Recharger la garmin" due:"1745013600" entry:"1745051119" modified:"1745062994" priority:"H" project:"School" status:"pending" uuid:"0804c953-abf3-48d7-a8fb-f5dd975fcf5d"]
+---
+time 1745070549
+new [description:"test" entry:"1745070549" modified:"1745070549" status:"pending" uuid:"a272dc51-ae7f-4b10-b5cb-257c7eeeaa41"]
+---
+time 1745070563
+old [description:"test" entry:"1745070549" modified:"1745070549" status:"pending" uuid:"a272dc51-ae7f-4b10-b5cb-257c7eeeaa41"]
+new [description:"test" end:"1745070563" entry:"1745070549" modified:"1745070563" status:"completed" uuid:"a272dc51-ae7f-4b10-b5cb-257c7eeeaa41"]
+---
+time 1745070798
+new [description:"test" entry:"1745070798" modified:"1745070798" status:"pending" uuid:"d2cf9f06-2b2e-446b-9f10-fe9823b4fbfe"]
+---
+time 1745070806
+old [description:"test" entry:"1745070798" modified:"1745070798" status:"pending" uuid:"d2cf9f06-2b2e-446b-9f10-fe9823b4fbfe"]
+new [description:"test" end:"1745070806" entry:"1745070798" modified:"1745070806" status:"completed" uuid:"d2cf9f06-2b2e-446b-9f10-fe9823b4fbfe"]
+---
+time 1745071065
+new [description:"test" entry:"1745071065" modified:"1745071065" status:"pending" uuid:"7e603e4a-f9b2-45ab-910d-4344587a1093"]
+---
+time 1745071074
+old [description:"test" entry:"1745071065" modified:"1745071065" status:"pending" uuid:"7e603e4a-f9b2-45ab-910d-4344587a1093"]
+new [description:"test" end:"1745071074" entry:"1745071065" modified:"1745071074" status:"completed" uuid:"7e603e4a-f9b2-45ab-910d-4344587a1093"]
+---
+time 1745074828
+new [description:"test" due:"1745013600" entry:"1745074828" modified:"1745074828" priority:"H" status:"pending" uuid:"a10a6360-c1f4-40c8-973d-f71b7ff84472"]
+---
+time 1745074864
+old [description:"test" due:"1745013600" entry:"1745074828" modified:"1745074828" priority:"H" status:"pending" uuid:"a10a6360-c1f4-40c8-973d-f71b7ff84472"]
+new [description:"test" due:"1745013600" entry:"1745074828" modified:"1745074864" priority:"H" project:"School" status:"pending" uuid:"a10a6360-c1f4-40c8-973d-f71b7ff84472"]
+---
+time 1745074876
+old [description:"Recharger la garmin" due:"1745013600" entry:"1745051119" modified:"1745062994" priority:"H" project:"School" status:"pending" uuid:"0804c953-abf3-48d7-a8fb-f5dd975fcf5d"]
+new [description:"Recharger la garmin" due:"1745013600" end:"1745074876" entry:"1745051119" modified:"1745074876" priority:"H" project:"School" status:"completed" uuid:"0804c953-abf3-48d7-a8fb-f5dd975fcf5d"]
+---
+time 1745074890
+old [description:"test" due:"1745013600" entry:"1745074828" modified:"1745074864" priority:"H" project:"School" status:"pending" uuid:"a10a6360-c1f4-40c8-973d-f71b7ff84472"]
+new [description:"test" due:"1745013600" end:"1745074890" entry:"1745074828" modified:"1745074890" priority:"H" project:"School" status:"completed" uuid:"a10a6360-c1f4-40c8-973d-f71b7ff84472"]
+---
+time 1745074985
+old [description:"Check for a TaskWarrior Waybar plugin\nNice if it show a list of the tasks on hover like the weather plugin" due:"1745013600" entry:"1745014739" modified:"1745062982" project:"Computer" status:"pending" tags:"Computer" tags_Computer:"x" uuid:"9987cb20-e964-4510-9cb0-21a3ec999ecf"]
+new [description:"Check for a TaskWarrior Waybar plugin\nNice if it show a list of the tasks on hover like the weather plugin" due:"1745013600" end:"1745074985" entry:"1745014739" modified:"1745074985" project:"Computer" status:"completed" tags:"Computer" tags_Computer:"x" uuid:"9987cb20-e964-4510-9cb0-21a3ec999ecf"]
+---
+time 1745091654
+new [description:"show task of the day on bootup " entry:"1745076926" modified:"1745076926" priority:"L" project:"Computer" status:"pending" uuid:"10821f48-148a-49f2-96f1-e8923b304504"]
+---
+time 1745091654
+old [description:"Réviser les dérivées de fonctions" due:"1745013600" entry:"1745052010" modified:"1745052010" project:"School.Maths" status:"pending" uuid:"c7440c30-73a1-4bd6-849f-3e416361758b"]
+new [description:"Réviser les dérivées de fonctions" due:"1745013600" end:"1745076959" entry:"1745052010" modified:"1745076959" project:"School.Maths" status:"completed" uuid:"c7440c30-73a1-4bd6-849f-3e416361758b"]
+---
+time 1745091654
+old [description:"Faire les sujets de BAC donné par le prof" due:"1745100000" entry:"1745052075" modified:"1745052075" project:"School.Maths" status:"pending" uuid:"f4ba289b-1518-4992-a86e-bb1b49566b54"]
+new [description:"Faire les sujets de BAC donné par le prof" due:"1745100000" entry:"1745052075" modified:"1745076963" priority:"M" project:"School.Maths" status:"pending" uuid:"f4ba289b-1518-4992-a86e-bb1b49566b54"]
+---
+time 1745091654
+old [description:"Réviser les proba" due:"1745100000" entry:"1745056625" modified:"1745056625" project:"School.Maths" status:"pending" uuid:"33e4aab2-c1c5-489b-ab89-6fd810620f82"]
+new [description:"Réviser les proba" due:"1745100000" entry:"1745056625" modified:"1745076967" priority:"H" project:"School.Maths" status:"pending" uuid:"33e4aab2-c1c5-489b-ab89-6fd810620f82"]
+---
+time 1745091654
+old [description:"Réviser les limites de fonctions" due:"1745100000" entry:"1745056641" modified:"1745056641" project:"School.Maths" status:"pending" uuid:"f23a6a6a-a7f7-4623-a101-ad046b042fc3"]
+new [description:"Réviser les limites de fonctions" due:"1745100000" entry:"1745056641" modified:"1745076971" priority:"H" project:"School.Maths" status:"pending" uuid:"f23a6a6a-a7f7-4623-a101-ad046b042fc3"]
+---
+time 1745091654
+old [description:"Réviser produit scalaire et géométrie dans l'espace" due:"1745186400" entry:"1745056737" modified:"1745056737" project:"School.Maths" status:"pending" uuid:"793ed711-8fe5-4b96-9d36-145f575858dd"]
+new [description:"Réviser produit scalaire et géométrie dans l'espace" due:"1745186400" entry:"1745056737" modified:"1745076987" priority:"H" project:"School.Maths" status:"pending" uuid:"793ed711-8fe5-4b96-9d36-145f575858dd"]
+---
+time 1745091654
+old [description:"Resolve screen recording issue with hyprland" entry:"1745053831" modified:"1745053831" priority:"M" project:"Computer" status:"pending" uuid:"5a9a931a-dd08-4a62-be37-c6e3c39c1c76"]
+new [description:"Resolve screen recording issue with hyprland" entry:"1745053831" modified:"1745076994" priority:"H" project:"Computer" status:"pending" uuid:"5a9a931a-dd08-4a62-be37-c6e3c39c1c76"]
+---
+time 1745091654
+old [description:"Clean installed Flatpack packages Arch" entry:"1745014032" modified:"1745062986" project:"Computer" status:"pending" tags:"Computer" tags_Computer:"x" uuid:"0893a6c6-84df-459a-a2a4-074743061367"]
+new [description:"Clean installed Flatpack packages Arch" entry:"1745014032" modified:"1745077003" priority:"M" project:"Computer" status:"pending" uuid:"0893a6c6-84df-459a-a2a4-074743061367"]
+---
+time 1745137795
+new [description:"Réviser fonctions convexes, concaves, etc..." due:"1745100000" entry:"1745137795" modified:"1745137795" priority:"H" project:"School.Maths" status:"pending" uuid:"ea3c59b7-08d7-4e24-925a-a583ea529f0e"]
+---
+time 1745146069
+old [description:"Réviser les proba" due:"1745100000" entry:"1745056625" modified:"1745076967" priority:"H" project:"School.Maths" status:"pending" uuid:"33e4aab2-c1c5-489b-ab89-6fd810620f82"]
+new [description:"Réviser les proba" due:"1745100000" end:"1745146069" entry:"1745056625" modified:"1745146069" priority:"H" project:"School.Maths" status:"completed" uuid:"33e4aab2-c1c5-489b-ab89-6fd810620f82"]
+---
+time 1745149202
+old [description:"show task of the day on bootup " entry:"1745076926" modified:"1745076926" priority:"L" project:"Computer" status:"pending" uuid:"10821f48-148a-49f2-96f1-e8923b304504"]
+new [description:"show task of the day on bootup " end:"1745149065" entry:"1745076926" modified:"1745149065" priority:"L" project:"Computer" status:"completed" uuid:"10821f48-148a-49f2-96f1-e8923b304504"]
+---
+time 1745151217
+old [description:"Resolve screen recording issue with hyprland" entry:"1745053831" modified:"1745076994" priority:"H" project:"Computer" status:"pending" uuid:"5a9a931a-dd08-4a62-be37-c6e3c39c1c76"]
+new [description:"Resolve screen recording issue with hyprland" entry:"1745053831" modified:"1745151217" priority:"H" project:"Computer" start:"1745151217" status:"pending" uuid:"5a9a931a-dd08-4a62-be37-c6e3c39c1c76"]
+---
+time 1745151232
+old [description:"Resolve screen recording issue with hyprland" entry:"1745053831" modified:"1745151217" priority:"H" project:"Computer" start:"1745151217" status:"pending" uuid:"5a9a931a-dd08-4a62-be37-c6e3c39c1c76"]
+new [description:"Resolve screen recording issue with hyprland" entry:"1745053831" modified:"1745151232" priority:"H" project:"Computer" status:"pending" uuid:"5a9a931a-dd08-4a62-be37-c6e3c39c1c76"]
+---
+time 1745153701
+new [description:"add an abbr for starting time with timew" entry:"1745151789" modified:"1745151789" priority:"M" project:"Computer" status:"pending" uuid:"0ca1ca0f-9b3a-438e-bfe3-0a17f1725608"]
+---
+time 1745154132
+old [description:"Réviser les limites de fonctions" due:"1745100000" entry:"1745056641" modified:"1745076971" priority:"H" project:"School.Maths" status:"pending" uuid:"f23a6a6a-a7f7-4623-a101-ad046b042fc3"]
+new [description:"Réviser les limites de fonctions" due:"1745100000" entry:"1745056641" modified:"1745154132" priority:"H" project:"School.Maths" start:"1745154132" status:"pending" uuid:"f23a6a6a-a7f7-4623-a101-ad046b042fc3"]
+---
+time 1745154246
+new [description:"Ajouter revision sur timew\nRegarder sur YPT pour les heures" entry:"1745154246" modified:"1745154246" project:"Computer" status:"pending" uuid:"4e740844-5df3-4b44-aaea-79e00d3c1b59"]
+---
+time 1745154273
+old [description:"Ajouter revision sur timew\nRegarder sur YPT pour les heures" entry:"1745154246" modified:"1745154246" project:"Computer" status:"pending" uuid:"4e740844-5df3-4b44-aaea-79e00d3c1b59"]
+new [description:"Ajouter revision sur timew\nRegarder sur YPT pour les heures" due:"1745100000" entry:"1745154246" modified:"1745154273" project:"Computer" status:"pending" uuid:"4e740844-5df3-4b44-aaea-79e00d3c1b59"]
+---
+time 1745154293
+old [description:"Ajouter revision sur timew\nRegarder sur YPT pour les heures" due:"1745100000" entry:"1745154246" modified:"1745154273" project:"Computer" status:"pending" uuid:"4e740844-5df3-4b44-aaea-79e00d3c1b59"]
+new [description:"Ajouter revision sur timew\nRegarder sur YPT pour les heures" due:"1745100000" entry:"1745154246" modified:"1745154293" priority:"M" project:"Computer" status:"pending" uuid:"4e740844-5df3-4b44-aaea-79e00d3c1b59"]
+---
+time 1745154800
+old [description:"Réviser les limites de fonctions" due:"1745100000" entry:"1745056641" modified:"1745154132" priority:"H" project:"School.Maths" start:"1745154132" status:"pending" uuid:"f23a6a6a-a7f7-4623-a101-ad046b042fc3"]
+new [description:"Réviser les limites de suites \/ fonctions" due:"1745100000" entry:"1745056641" modified:"1745154800" priority:"H" project:"School.Maths" start:"1745154132" status:"pending" uuid:"f23a6a6a-a7f7-4623-a101-ad046b042fc3"]
+---
+time 1745154913
+old [description:"add an abbr for starting time with timew" entry:"1745151789" modified:"1745151789" priority:"M" project:"Computer" status:"pending" uuid:"0ca1ca0f-9b3a-438e-bfe3-0a17f1725608"]
+new [description:"add an abbr for starting time with timew" end:"1745154913" entry:"1745151789" modified:"1745154913" priority:"M" project:"Computer" status:"completed" uuid:"0ca1ca0f-9b3a-438e-bfe3-0a17f1725608"]
+---
+time 1745159515
+new [description:"Install an os (ubuntu ?) on X1" entry:"1745159515" modified:"1745159515" priority:"H" project:"Computer.TaskWarrior" status:"pending" uuid:"31352783-7d55-40c1-9c24-ecf7e23ad864"]
+---
+time 1745159594
+new [description:"Use ssh for using timewarrior on x1\nlink : https:\/\/rafaelc.org\/posts\/using-timewarrior-on-multiple-devices\/" entry:"1745159594" modified:"1745159594" priority:"M" project:"Computer.TaskWarrior" status:"pending" uuid:"d118c4a9-0c04-4aec-951d-7cc33279d2f4"]
+---
+time 1745160105
+old [description:"Réviser les limites de suites \/ fonctions" due:"1745100000" entry:"1745056641" modified:"1745154800" priority:"H" project:"School.Maths" start:"1745154132" status:"pending" uuid:"f23a6a6a-a7f7-4623-a101-ad046b042fc3"]
+new [description:"Réviser les limites de suites \/ fonctions" due:"1745100000" end:"1745160105" entry:"1745056641" modified:"1745160105" priority:"H" project:"School.Maths" status:"completed" uuid:"f23a6a6a-a7f7-4623-a101-ad046b042fc3"]
+---
+time 1745160377
+old [description:"Réviser fonctions convexes, concaves, etc..." due:"1745100000" entry:"1745137795" modified:"1745137795" priority:"H" project:"School.Maths" status:"pending" uuid:"ea3c59b7-08d7-4e24-925a-a583ea529f0e"]
+new [description:"Réviser fonctions convexes, concaves, etc..." due:"1745100000" entry:"1745137795" modified:"1745160377" priority:"H" project:"School.Maths" start:"1745160377" status:"pending" uuid:"ea3c59b7-08d7-4e24-925a-a583ea529f0e"]
+---
+time 1745160504
+new [description:"Réviser limites de fonction" due:"1745186400" entry:"1745160504" modified:"1745160504" priority:"H" project:"School.Maths" status:"pending" uuid:"8332dbed-728d-4d22-94f0-7e8bd324c70f"]
+---
+time 1745160850
+new [description:"Eval sur un temps demander a arthur priority.H" entry:"1745160850" modified:"1745160850" project:"School.Espagnol" status:"pending" tags:"Evaluation" tags_Evaluation:"x" uuid:"35397d17-eaec-47fe-8d4b-79f6975f2e5d"]
+---
+time 1745161916
+old [description:"Réviser fonctions convexes, concaves, etc..." due:"1745100000" entry:"1745137795" modified:"1745160377" priority:"H" project:"School.Maths" start:"1745160377" status:"pending" uuid:"ea3c59b7-08d7-4e24-925a-a583ea529f0e"]
+new [description:"Réviser fonctions convexes, concaves, etc..." due:"1745100000" end:"1745161916" entry:"1745137795" modified:"1745161916" priority:"H" project:"School.Maths" status:"completed" uuid:"ea3c59b7-08d7-4e24-925a-a583ea529f0e"]
+---
+time 1745163244
+old [description:"Eval sur un temps demander a arthur priority.H" entry:"1745160850" modified:"1745160850" project:"School.Espagnol" status:"pending" tags:"Evaluation" tags_Evaluation:"x" uuid:"35397d17-eaec-47fe-8d4b-79f6975f2e5d"]
+new [description:"Eval sur un temps demander a arthur priority.H" entry:"1745160850" modified:"1745163244" priority:"H" project:"School.Espagnol" status:"pending" tags:"Evaluation" tags_Evaluation:"x" uuid:"35397d17-eaec-47fe-8d4b-79f6975f2e5d"]
+---
+time 1745170018
+old [description:"Use ssh for using timewarrior on x1\nlink : https:\/\/rafaelc.org\/posts\/using-timewarrior-on-multiple-devices\/" entry:"1745159594" modified:"1745159594" priority:"M" project:"Computer.TaskWarrior" status:"pending" uuid:"d118c4a9-0c04-4aec-951d-7cc33279d2f4"]
+new [description:"Use ssh for using timewarrior on x1\nlink : https:\/\/rafaelc.org\/posts\/using-timewarrior-on-multiple-devices\/" entry:"1745159594" modified:"1745170018" priority:"M" project:"Computer.TaskWarrior" start:"1745170018" status:"pending" uuid:"d118c4a9-0c04-4aec-951d-7cc33279d2f4"]
+---
+time 1745170039
+old [description:"Resolve screen recording issue with hyprland" entry:"1745053831" modified:"1745151232" priority:"H" project:"Computer" status:"pending" uuid:"5a9a931a-dd08-4a62-be37-c6e3c39c1c76"]
+new [description:"Resolve screen recording issue with hyprland" entry:"1745053831" modified:"1745170039" priority:"H" project:"Computer" start:"1745170039" status:"pending" uuid:"5a9a931a-dd08-4a62-be37-c6e3c39c1c76"]
+---
+time 1745172078
+old [description:"Resolve screen recording issue with hyprland" entry:"1745053831" modified:"1745170039" priority:"H" project:"Computer" start:"1745170039" status:"pending" uuid:"5a9a931a-dd08-4a62-be37-c6e3c39c1c76"]
+new [description:"Resolve screen recording issue with hyprland" entry:"1745053831" modified:"1745172078" priority:"H" project:"Computer" status:"pending" uuid:"5a9a931a-dd08-4a62-be37-c6e3c39c1c76"]
+---
+time 1745172085
+old [description:"Install an os (ubuntu ?) on X1" entry:"1745159515" modified:"1745159515" priority:"H" project:"Computer.TaskWarrior" status:"pending" uuid:"31352783-7d55-40c1-9c24-ecf7e23ad864"]
+new [description:"Install an os (ubuntu ?) on X1" end:"1745172085" entry:"1745159515" modified:"1745172085" priority:"H" project:"Computer.TaskWarrior" status:"completed" uuid:"31352783-7d55-40c1-9c24-ecf7e23ad864"]
+---
+time 1745174924
+old [description:"Use ssh for using timewarrior on x1\nlink : https:\/\/rafaelc.org\/posts\/using-timewarrior-on-multiple-devices\/" entry:"1745159594" modified:"1745170018" priority:"M" project:"Computer.TaskWarrior" start:"1745170018" status:"pending" uuid:"d118c4a9-0c04-4aec-951d-7cc33279d2f4"]
+new [description:"Use ssh for using timewarrior on x1\nlink : https:\/\/rafaelc.org\/posts\/using-timewarrior-on-multiple-devices\/" end:"1745174924" entry:"1745159594" modified:"1745174924" priority:"M" project:"Computer.TaskWarrior" status:"completed" uuid:"d118c4a9-0c04-4aec-951d-7cc33279d2f4"]
+---
+time 1745179107
+old [description:"Ajouter revision sur timew\nRegarder sur YPT pour les heures" due:"1745100000" entry:"1745154246" modified:"1745154293" priority:"M" project:"Computer" status:"pending" uuid:"4e740844-5df3-4b44-aaea-79e00d3c1b59"]
+new [description:"Ajouter revision sur timew\nRegarder sur YPT pour les heures" due:"1745100000" end:"1745179107" entry:"1745154246" modified:"1745179107" priority:"M" project:"Computer" status:"completed" uuid:"4e740844-5df3-4b44-aaea-79e00d3c1b59"]
+---
+time 1745181456
+new [description:"faire un uno" entry:"1745181456" modified:"1745181456" status:"pending" uuid:"e85db1fd-f618-4a34-9055-6beb60083334"]
+---
+time 1745181470
+old [description:"faire un uno" entry:"1745181456" modified:"1745181456" status:"pending" uuid:"e85db1fd-f618-4a34-9055-6beb60083334"]
+new [description:"faire un uno" end:"1745181468" entry:"1745181456" modified:"1745181470" status:"deleted" uuid:"e85db1fd-f618-4a34-9055-6beb60083334"]
+---
+time 1745182502
+new [description:"faire un post sur mon site web pour présenter mon workflow" entry:"1745182020" modified:"1745182020" priority:"M" project:"Blog.Workflow" status:"pending" uuid:"1a1e30af-529f-48ad-b584-c9a0c64e019b"]
+---
+time 1745185833
+old [description:"Faire les sujets de BAC donné par le prof" due:"1745100000" entry:"1745052075" modified:"1745076963" priority:"M" project:"School.Maths" status:"pending" uuid:"f4ba289b-1518-4992-a86e-bb1b49566b54"]
+new [description:"Faire les sujets de BAC donné par le prof" due:"1745186400" entry:"1745052075" modified:"1745185833" priority:"M" project:"School.Maths" status:"pending" uuid:"f4ba289b-1518-4992-a86e-bb1b49566b54"]
+---
+time 1745220302
+new [description:"revoir fin de l'équation de trajectoire" due:"1745100000" entry:"1745218875" modified:"1745218875" priority:"H" project:"School.Physique" status:"pending" uuid:"eac02a89-d1de-45a6-897d-8333434d1e27"]
+---
+time 1745220302
+new [description:"revoir mouvement d'un electron" due:"1745186400" entry:"1745218890" modified:"1745218890" project:"School.Physique" status:"pending" uuid:"cb2ce090-0902-411f-9408-9794ef5d6105"]
+---
+time 1745220302
+new [description:"revoir exos limites de suites" due:"1745186400" entry:"1745218919" modified:"1745218919" project:"School.Maths" status:"pending" uuid:"96178cd4-8d8e-4839-82dc-a4c28d8d52d6"]
+---
+time 1745221395
+old [description:"revoir fin de l'équation de trajectoire" due:"1745100000" entry:"1745218875" modified:"1745218875" priority:"H" project:"School.Physique" status:"pending" uuid:"eac02a89-d1de-45a6-897d-8333434d1e27"]
+new [description:"revoir fin de l'équation de trajectoire" due:"1745100000" entry:"1745218875" modified:"1745221395" priority:"M" project:"School.Physique" status:"pending" uuid:"eac02a89-d1de-45a6-897d-8333434d1e27"]
+---
+time 1745221428
+old [description:"Faire les sujets de BAC donné par le prof" due:"1745186400" entry:"1745052075" modified:"1745185833" priority:"M" project:"School.Maths" status:"pending" uuid:"f4ba289b-1518-4992-a86e-bb1b49566b54"]
+new [description:"Faire les sujets de BAC donné par le prof" due:"1745186400" entry:"1745052075" modified:"1745221428" project:"School.Maths" status:"pending" uuid:"f4ba289b-1518-4992-a86e-bb1b49566b54"]
+---
+time 1745221448
+old [description:"revoir mouvement d'un electron" due:"1745186400" entry:"1745218890" modified:"1745218890" project:"School.Physique" status:"pending" uuid:"cb2ce090-0902-411f-9408-9794ef5d6105"]
+new [description:"revoir mouvement d'un electron" due:"1745186400" entry:"1745218890" modified:"1745221448" priority:"M" project:"School.Physique" status:"pending" uuid:"cb2ce090-0902-411f-9408-9794ef5d6105"]
+---
+time 1745221448
+old [description:"revoir exos limites de suites" due:"1745186400" entry:"1745218919" modified:"1745218919" project:"School.Maths" status:"pending" uuid:"96178cd4-8d8e-4839-82dc-a4c28d8d52d6"]
+new [description:"revoir exos limites de suites" due:"1745186400" entry:"1745218919" modified:"1745221448" priority:"M" project:"School.Maths" status:"pending" uuid:"96178cd4-8d8e-4839-82dc-a4c28d8d52d6"]
+---
+time 1745223842
+old [description:"Réviser produit scalaire et géométrie dans l'espace" due:"1745186400" entry:"1745056737" modified:"1745076987" priority:"H" project:"School.Maths" status:"pending" uuid:"793ed711-8fe5-4b96-9d36-145f575858dd"]
+new [description:"Réviser produit scalaire et géométrie dans l'espace" due:"1745186400" entry:"1745056737" modified:"1745223842" priority:"H" project:"School.Maths" start:"1745223842" status:"pending" uuid:"793ed711-8fe5-4b96-9d36-145f575858dd"]
+---

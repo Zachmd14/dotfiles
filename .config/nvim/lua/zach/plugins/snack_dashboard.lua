@@ -1,6 +1,3 @@
-local ltw = require("little-taskwarrior")
-ltw.setup({})
-
 return {
 	"folke/snacks.nvim",
 	opts = {
@@ -18,14 +15,6 @@ return {
 					end,
 					height = 20,
 					padding = 1,
-				},
-				{
-					icon = "",
-					title = "Little TaskWarrior",
-				},
-				{
-					text = ltw.get_snacks_dashboard_tasks(56, "dir", "special"),
-					indent = 2,
 				},
 				{ section = "startup" },
 				{

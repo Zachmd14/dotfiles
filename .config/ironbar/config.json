@@ -1,0 +1,12 @@
+{
+  "position": "top",
+  "height": 10,
+  "start": [
+      {
+        "type": "workspaces",
+        "all_monitors": true
+      }
+  ],
+  "center": [],
+  "end": []
+}

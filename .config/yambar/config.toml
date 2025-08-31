@@ -1,0 +1,495 @@
+# Top level anchor definition
+fira_regular: &fira "Fira Code:style=Regular:pixelsize=14"
+
+bar:
+  height: 20
+  location: "top"
+  font: *fira
+  spacing: 2
+  margin: 0
+  layer: "bottom"
+  foreground: "eeeeeeff"
+  background: "00000000"
+
+  right:
+    - clock:
+        time-format: "%H:%M %Z"
+        date-format: "%A %Y-%m-%d"
+        content:
+          - string: {text: "{date}", right-margin: 10}
+          - string: {text: "{time}", right-margin: 10}
+    - label:
+        content:
+          string:
+            on-click: 'sudo poweroff'
+            text: ""
+            font: *fira
+            right-margin: 1
+
+  center:
+    - clock:
+        time-format: "%H:%M:%S %Z"
+        content:
+          - string: {text: "{time}", right-margin: 0}
+
+  left:
+    - script:
+        path: /usr/bin/yambar-hyprland-wses
+        anchors:
+          ws_focused: &ws_focused "fba922ff"
+          ws_active: &ws_active "ffaa00ff"
+          ws_empty: &ws_empty "555555ff"
+          ws_other: &ws_other "bbbbbbff"
+          ws_1: &ws_1 "1"
+          ws_2: &ws_2 "2"
+          ws_3: &ws_3 "3"
+          ws_4: &ws_4 "4"
+          ws_5: &ws_5 "5"
+          ws_6: &ws_6 "6"
+          ws_7: &ws_7 "7"
+          ws_8: &ws_8 "8"
+          ws_9: &ws_9 "9"
+          ws_10: &ws_10 "10"
+          ws_11: &ws_11 "11"
+          ws_12: &ws_12 "12"
+          ws_13: &ws_13 "13"
+          ws_14: &ws_14 "14"
+          ws_15: &ws_15 "15"
+          ws_16: &ws_16 "16"
+          ws_17: &ws_17 "17"
+          ws_18: &ws_18 "18"
+          ws_19: &ws_19 "19"
+          ws_20: &ws_20 "20"
+          ws_21: &ws_21 "21"
+          ws_22: &ws_22 "22"
+          ws_23: &ws_23 "23"
+          ws_24: &ws_24 "24"
+          ws_25: &ws_25 "25"
+          ws_26: &ws_26 "26"
+          ws_27: &ws_27 "27"
+          ws_28: &ws_28 "28"
+          ws_29: &ws_29 "29"
+          ws_30: &ws_30 "30"
+        content:
+          list:
+            spacing: 5
+            items:
+              # Workspace 1
+              - map:
+                  default:
+                    string: { text: *ws_1, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 2:
+                      empty: {}
+                    workspace_1_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_1_active:
+                      string: { text: *ws_1, foreground: *ws_active }
+                    workspace_1_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 2
+              - map:
+                  default:
+                    string: { text: *ws_2, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 3:
+                      empty: {}
+                    workspace_2_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_2_active:
+                      string: { text: *ws_2, foreground: *ws_active }
+                    workspace_2_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 3
+              - map:
+                  default:
+                    string: { text: *ws_3, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 4:
+                      empty: {}
+                    workspace_3_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_3_active:
+                      string: { text: *ws_3, foreground: *ws_active }
+                    workspace_3_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 4
+              - map:
+                  default:
+                    string: { text: *ws_4, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 5:
+                      empty: {}
+                    workspace_4_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_4_active:
+                      string: { text: *ws_4, foreground: *ws_active }
+                    workspace_4_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 5
+              - map:
+                  default:
+                    string: { text: *ws_5, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 6:
+                      empty: {}
+                    workspace_5_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_5_active:
+                      string: { text: *ws_5, foreground: *ws_active }
+                    workspace_5_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 6
+              - map:
+                  default:
+                    string: { text: *ws_6, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 7:
+                      empty: {}
+                    workspace_6_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_6_active:
+                      string: { text: *ws_6, foreground: *ws_active }
+                    workspace_6_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 7
+              - map:
+                  default:
+                    string: { text: *ws_7, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 8:
+                      empty: {}
+                    workspace_7_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_7_active:
+                      string: { text: *ws_7, foreground: *ws_active }
+                    workspace_7_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 8
+              - map:
+                  default:
+                    string: { text: *ws_8, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 9:
+                      empty: {}
+                    workspace_8_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_8_active:
+                      string: { text: *ws_8, foreground: *ws_active }
+                    workspace_8_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 9
+              - map:
+                  default:
+                    string: { text: *ws_9, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 10:
+                      empty: {}
+                    workspace_9_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_9_active:
+                      string: { text: *ws_9, foreground: *ws_active }
+                    workspace_9_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 10
+              - map:
+                  default:
+                    string: { text: *ws_10, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 11:
+                      empty: {}
+                    workspace_10_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_10_active:
+                      string: { text: *ws_10, foreground: *ws_active }
+                    workspace_10_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 11
+              - map:
+                  default:
+                    string: { text: *ws_11, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 12:
+                      empty: {}
+                    workspace_11_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_11_active:
+                      string: { text: *ws_11, foreground: *ws_active }
+                    workspace_11_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 12
+              - map:
+                  default:
+                    string: { text: *ws_12, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 13:
+                      empty: {}
+                    workspace_12_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_12_active:
+                      string: { text: *ws_12, foreground: *ws_active }
+                    workspace_12_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 13
+              - map:
+                  default:
+                    string: { text: *ws_13, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 14:
+                      empty: {}
+                    workspace_13_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_13_active:
+                      string: { text: *ws_13, foreground: *ws_active }
+                    workspace_13_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 14
+              - map:
+                  default:
+                    string: { text: *ws_14, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 15:
+                      empty: {}
+                    workspace_14_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_14_active:
+                      string: { text: *ws_14, foreground: *ws_active }
+                    workspace_14_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 15
+              - map:
+                  default:
+                    string: { text: *ws_15, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 16:
+                      empty: {}
+                    workspace_15_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_15_active:
+                      string: { text: *ws_15, foreground: *ws_active }
+                    workspace_15_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 16
+              - map:
+                  default:
+                    string: { text: *ws_16, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 17:
+                      empty: {}
+                    workspace_16_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_16_active:
+                      string: { text: *ws_16, foreground: *ws_active }
+                    workspace_16_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 17
+              - map:
+                  default:
+                    string: { text: *ws_17, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 18:
+                      empty: {}
+                    workspace_17_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_17_active:
+                      string: { text: *ws_17, foreground: *ws_active }
+                    workspace_17_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 18
+              - map:
+                  default:
+                    string: { text: *ws_18, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 19:
+                      empty: {}
+                    workspace_18_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_18_active:
+                      string: { text: *ws_18, foreground: *ws_active }
+                    workspace_18_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 19
+              - map:
+                  default:
+                    string: { text: *ws_19, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 20:
+                      empty: {}
+                    workspace_19_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_19_active:
+                      string: { text: *ws_19, foreground: *ws_active }
+                    workspace_19_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 20
+              - map:
+                  default:
+                    string: { text: *ws_20, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 21:
+                      empty: {}
+                    workspace_20_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_20_active:
+                      string: { text: *ws_20, foreground: *ws_active }
+                    workspace_20_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 21
+              - map:
+                  default:
+                    string: { text: *ws_21, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 22:
+                      empty: {}
+                    workspace_21_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_21_active:
+                      string: { text: *ws_21, foreground: *ws_active }
+                    workspace_21_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 22
+              - map:
+                  default:
+                    string: { text: *ws_22, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 23:
+                      empty: {}
+                    workspace_22_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_22_active:
+                      string: { text: *ws_22, foreground: *ws_active }
+                    workspace_22_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 23
+              - map:
+                  default:
+                    string: { text: *ws_23, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 24:
+                      empty: {}
+                    workspace_23_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_23_active:
+                      string: { text: *ws_23, foreground: *ws_active }
+                    workspace_23_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 24
+              - map:
+                  default:
+                    string: { text: *ws_24, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 25:
+                      empty: {}
+                    workspace_24_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_24_active:
+                      string: { text: *ws_24, foreground: *ws_active }
+                    workspace_24_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 25
+              - map:
+                  default:
+                    string: { text: *ws_25, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 26:
+                      empty: {}
+                    workspace_25_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_25_active:
+                      string: { text: *ws_25, foreground: *ws_active }
+                    workspace_25_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 26
+              - map:
+                  default:
+                    string: { text: *ws_26, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 27:
+                      empty: {}
+                    workspace_26_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_26_active:
+                      string: { text: *ws_26, foreground: *ws_active }
+                    workspace_26_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 27
+              - map:
+                  default:
+                    string: { text: *ws_27, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 28:
+                      empty: {}
+                    workspace_27_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_27_active:
+                      string: { text: *ws_27, foreground: *ws_active }
+                    workspace_27_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 28
+              - map:
+                  default:
+                    string: { text: *ws_28, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 29:
+                      empty: {}
+                    workspace_28_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_28_active:
+                      string: { text: *ws_28, foreground: *ws_active }
+                    workspace_28_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 29
+              - map:
+                  default:
+                    string: { text: *ws_29, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 30:
+                      empty: {}
+                    workspace_29_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_29_active:
+                      string: { text: *ws_29, foreground: *ws_active }
+                    workspace_29_windows == 0:
+                      string: { text: "", foreground: *ws_empty }
+
+              # Workspace 30
+              - map:
+                  default:
+                    string: { text: *ws_30, foreground: *ws_other }
+                  conditions:
+                    workspace_count < 31:
+                      empty: {}
+                    workspace_30_focused:
+                      string: { text: "", foreground: *ws_focused }
+                    workspace_30_active:
+                      string: { text: *ws_30, foreground: *ws_active }
+                    workspace_30_windows == 0:
+                      string: { text: "", foreground: *ws_empty }

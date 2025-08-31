@@ -7,6 +7,9 @@
 # export fzf settigns
 export FZF_DEFAULT_OPTS="--height=90% --layout=reverse --info=inline --border --margin=1 --padding=1 --preview 'bat --style=plain --color=always {}' --preview-window=right:55%"
 
+export PIPEWIRE_LATENCY="128/48000"  # Adjust buffer size if needed
+export JACK_NO_AUDIO_RESERVATION=1    # Prevents JACK from hogging audio
+
 # Bob the fish config
 set -g theme_color_scheme dark
 set -g theme_display_git_untracked no
@@ -20,6 +23,9 @@ set -g theme_title_display_path no
 set -g theme_date_format "+%a %H:%M"
 set -g theme_avoid_ambiguous_glyphs yes
 set -g default_user zach
+set -gx PATH $HOME/.cargo/bin $PATH
+set -Ux fish_user_paths $HOME/.config/emacs/bin $fish_user_paths
+
 
 # terminal startup commands
 # fastfetch --logo-type none
@@ -42,12 +48,12 @@ if status is-interactive
 		set -gx PROTON "/usr/share/steam/compatibilitytools.d/proton_tkg_makepkg/proton"
 
     # Aliases
-    abbr ls 'exa --icons --group-directories-first --sort=extension'
     abbr grep 'grep --color=auto'
     abbr shutit 'shutdown -h 0'
-    abbr lq 'exa --icons -1 -T -R --color=always -L'
+    abbr lq 'exa --icons --group-directories-first --sort=extension'
     abbr lqa 'exa --icons -1 -T -R --color=always -L 9'
     abbr ytdl 'yt-dlp -P /home/zach/Videos/youtube --convert-subs srt --remux-video mp4 --write-auto-subs -u SAMCOUCAIL -p aaa -i'
+    abbr ytdla 'yt-dlp -P /home/zach/Music/musicSamples/Perso/youtube/ -x --audio-format wav '
     abbr nv 'nvim'
     abbr weather 'curl wttr.in/14530'
     abbr removebg 'source ~/scripts/rm_bg/bin/activate; python ~/scripts/remove_bg.py; deactivate'
@@ -77,27 +83,40 @@ if status is-interactive
     abbr mvn-new 'mvn archetype:generate -DgroupId=com.example -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false -DartifactId='
     abbr td 'todoist-cli --color --indent'
     abbr tdday 'todoist-cli --color --indent l --filter today'
-		# abbr fastfetch 'fastfetch --logo-type none'
-		abbr config '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-		abbr gpom 'git push origin main'
-		abbr gp 'sudo gopro webcam -a -r 1080 -f linear'
-		abbr wifi 'nmtui'
-		abbr rsync 'rsync --progress'
-		abbr landscape 'bash ~/scripts/landscape-gif.sh'
-		abbr remind 'bash /home/zach/scripts/reminder.sh -'
-		abbr history 'history | fzf | xclip -selection clipboard'
-		abbr commit 'git commit -m'
-		abbr nf 'nvim (fzf --tmux --height=90%)'
-		abbr fzf 'fzf --tmux --height=90%'
-		abbr color 'bash -c "$(wget -qO- https://git.io/vQgMr)"'
-		abbr com 'for cmd in (ls /usr/bin /bin /usr/local/bin); echo $cmd; end | fzf'
-		abbr nn '~/scripts/new_note.sh'
-		abbr sn 'cd "/home/zach/Documents/Obsidian/schoolNotes/" ; set selected_file (fzf --tmux --height=90%) ; nvim $selected_file'
-		abbr hn 'clx -n'
+    abbr fastfetch 'fastfetch --logo-type none'
+    # abbr config '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+    abbr gpom 'git push origin main'
+    abbr gp 'sudo gopro webcam -a -r 1080 -f linear'
+    abbr wifi 'nmtui'
+    abbr rsync 'rsync --progress'
+    abbr landscape 'bash ~/scripts/landscape-gif.sh'
+    abbr remind 'bash /home/zach/scripts/reminder.sh -'
+    abbr history 'history | fzf | xclip -selection clipboard'
+    abbr commit 'git commit -m'
+    abbr nf 'nvim (fzf --tmux --height=90%)'
+    abbr fzf 'fzf --tmux --height=90%'
+    abbr color 'bash -c "$(wget -qO- https://git.io/vQgMr)"'
+    abbr com 'for cmd in (ls /usr/bin /bin /usr/local/bin); echo $cmd; end | fzf'
+    # abbr nn '~/scripts/new_note.sh'
+	abbr sn 'cd "/home/zach/Documents/Obsidian/schoolNotes/" ; set selected_file (fzf --tmux --height=90%) ; nvim $selected_file'
+	abbr hn 'clx -n'
     abbr nvo 'cd "/home/zach/Documents/Obsidian/mainVault/" ; set selected_file (find . -type f -name "*.md" | fzf --tmux --height=90%) ; nvim $selected_file'
-		abbr ts 'cd /home/zach/scripts/tmux-sessions/ && bash (fzf --tmux --height=90%)'
-		abbr pk 'fzf-kill'
-		abbr tk 'task'
+    abbr ts 'cd /home/zach/scripts/tmux-sessions/ && bash (fzf --tmux --height=90%)'
+    abbr pk 'fzf-kill'
+    abbr tk 'ssh zach@88.170.165.245 -p 32768 task rc._forcecolor=on'
+    abbr task 'ssh zach@88.170.165.245 -p 32768 task rc._forcecolor=on'
+    abbr rm 'rm -I'
+    # abbr tm 'timew'
+    abbr tx 'tmux'
+    # abbr tms 'timew summary :ids'
+    abbr sshlaptop 'ssh zach@88.170.165.245 -p 32768'
+    abbr timew 'ssh zach@88.170.165.245 -p 32768 timew :color'
+    abbr tm 'ssh zach@88.170.165.245 -p 32768 timew :color'
+    abbr tms 'ssh zach@88.170.165.245 -p 32768 timew :color summary :ids'
+    abbr globe 'globe -sc5 -g20'
+    abbr fl 'wine "/home/zach/.wine/dosdevices/c:/Program\ Files/Image-Line/FL\ Studio\ 20/FL.exe"'
+    abbr ableton 'wine start /unix "/home/zach/.wine/dosdevices/c:/ProgramData/Ableton/Live 11 Suite/Program/Ableton Live 11 Suite.exe"'
+    abbr orb 'bash /home/zach/scripts/org-roam-backup.sh '
 end
 
 function fish_user_key_bindings

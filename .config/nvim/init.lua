@@ -1,3 +1,6 @@
+-- set leader key
+vim.api.nvim_set_var('mapleader', ' ')
+
 -- set cusor lines
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
@@ -14,16 +17,12 @@ vim.o.conceallevel = 1
 -- Correct last mispelled word
 vim.api.nvim_set_keymap('n', '<C-z>', '[s1z=', { noremap = true, silent = true })
 
--- set keymaps for navigating
-vim.api.nvim_set_keymap('n', 'j', 'h', { noremap = true })
-vim.api.nvim_set_keymap('n', 'k', 'j', { noremap = true })
-vim.api.nvim_set_keymap('n', 'l', 'k', { noremap = true })
-vim.api.nvim_set_keymap('n', 'm', 'l', { noremap = true })
-
-vim.api.nvim_set_keymap('v', 'j', 'h', { noremap = true })
-vim.api.nvim_set_keymap('v', 'k', 'j', { noremap = true })
-vim.api.nvim_set_keymap('v', 'l', 'k', { noremap = true })
-vim.api.nvim_set_keymap('v', 'm', 'l', { noremap = true })
+-- Set anki.nvim keymaps
+vim.api.nvim_set_keymap('n', '<leader>bb', ':Anki prettify-minimal-basic<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>bc', ':Anki prettify-minimal-cloze<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>br', ':Anki prettify-minimal-basic_reverse<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>bs', ':AnkiSend<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>bsg', ':AnkiSendGui<CR>', { noremap = true, silent = true })
 
 local opts = { noremap = true, silent = true }
 vim.api.nvim_set_keymap('n', '<S-l>', ':wincmd k<CR>', opts)
@@ -92,9 +91,6 @@ vim.api.nvim_set_keymap('n', '<Space>t', ':TimerlyToggle<CR>', opts)
 
 -- set clipboard
 vim.o.clipboard = 'unnamedplus'
-
--- set leader key
-vim.api.nvim_set_var('mapleader', ' ')
 
 -- enable vimtex default keymapping
 vim.g.vimtex_mappings_enabled = 1

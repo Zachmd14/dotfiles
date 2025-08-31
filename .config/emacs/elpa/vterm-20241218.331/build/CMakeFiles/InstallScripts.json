@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/zach/.config/emacs/elpa/vterm-20241218.331/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

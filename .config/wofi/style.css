@@ -1,0 +1,20 @@
+* {
+    font-family: Monospace;
+    font-size: 12pt;
+}
+
+#input {
+    background-color: #282828;
+    color: #ebdbb2;
+    border: none;
+    padding: 10px;
+}
+
+#entry {
+    color: #ebdbb2;
+    background-color: #282828;
+}
+
+#entry:selected {
+    background-color: #458588;
+}
