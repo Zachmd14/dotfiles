@@ -112,13 +112,91 @@
 (global-set-key (kbd "M-k")    'windmove-up)
 (global-set-key (kbd "M-j")  'windmove-down)
 
+
+(use-package which-key
+  :defer 0
+  :diminish which-key-mode
+  :config
+  (which-key-mode)
+  (setq which-key-idle-delay 0.5))
+
+(use-package ivy-rich
+  :after ivy
+  :init
+  (ivy-rich-mode 1))
+
+(use-package all-the-icons-dired
+  :hook (dired-mode . all-the-icons-dired-mode))
+
+(use-package evil)
+  :init
+  (setq evil-want-integration t)
+  (setq evil-want-keybinding nil)
+  (setq evil-want-C-u-scroll t)
+  (setq evil-want-C-i-jump nil)
+  :config
+  (evil-mode 1)
+  (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
+  (define-key evil-insert-state-map (kbd "C-h") 'evil-delete-backward-char-and-join)
+
+  ;; Use visual line motions even outside of visual-line-mode buffers
+  (evil-global-set-key 'motion "j" 'evil-next-visual-line)
+  (evil-global-set-key 'motion "k" 'evil-previous-visual-line)
+
+  (evil-set-initial-state 'messages-buffer-mode 'normal)
+  (evil-set-initial-state 'dashboard-mode 'normal))
+
+
+(use-package general
+  :after evil
+  :config
+  ;; Unbind C-SPC from set-mark-command first
+  (global-unset-key (kbd "C-SPC"))
+
+  (general-create-definer zach/leader-keys
+    :keymaps '(normal insert visual emacs)
+    :prefix "SPC"
+    :global-prefix "C-SPC")
+
+  (zach/leader-keys
+    "f"  '(:ignore t :which-key "files")
+    "t"  '(:ignore t :which-key "toggle")
+    "ff" '(counsel-find-file :which-key "find file")
+    "fp" (list (lambda () (interactive)
+               (counsel-find-file "~/.config/emacs/"))
+               :which-key "find file in config"))s)
+    "tr" (lambda () (interactive)
+              (split-window-right)
+              (other-window 1)
+              (vterm) :wich-key "open vterm to the right")
+
+(use-package hydra
+  :defer t)
+
+(defhydra hydra-text-scale (:timeout 4)
+  "scale text"
+  ("j" text-scale-increase "in")
+  ("k" text-scale-decrease "out")
+  ("f" nil "finished" :exit t))
+
+(zach/leader-keys
+  "ds" '(hydra-text-scale/body :which-key "scale text"))
+
+(use-package evil-collection
+  :after evil
+  :config
+  (evil-collection-init))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(counsel dired doom-modeline doom-themes evil obsidian vterm)))
+   '(all-the-icons-dired counsel doom-modeline doom-themes evil general
+			 ivy-rich obsidian vterm)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
