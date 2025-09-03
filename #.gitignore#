@@ -1,0 +1,10 @@
+.config/nvim/lazy-lock.json
+scripts/grub2-nord-theme
+scripts/test.log
+.config/tmux/plugins
+.config/emacs/init.el~
+.config/emacs/#*
+.config/emacs/auto-save-list
+.config/emacs/recentf
+.config/emacs/elpa
+.config/emacs/transient
