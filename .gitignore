@@ -3,4 +3,6 @@ scripts/grub2-nord-theme
 scripts/test.log
 .config/tmux/plugins
 .config/emacs/init.el~
-.config/emacs/#init.el#
+.config/emacs/#*
+.config/emacs/auto-save-list
+.config/emacs/recentf
