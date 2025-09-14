@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: org definition block
+# key: def
+# --
+#+begin_definition
+$0
+#+end_definition

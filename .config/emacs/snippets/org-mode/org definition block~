@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: org definition block
+# key: def
+# --
+#+begin_quote
+$0
+#+end_quote

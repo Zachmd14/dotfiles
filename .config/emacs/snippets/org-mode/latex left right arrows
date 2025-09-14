@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: LaTeX left right arrows
+# key: lrar
+# --
+\Leftrightarrow

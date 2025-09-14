@@ -10,4 +10,4 @@ WAV_FILE="/home/zach/scripts/notification.wav"
 termdown $TIME
 
 # Send a notification and send a Telegram message
-notify-send "Timer ended" && /home/zach/.local/share/pipx/venvs/telegram-send/bin/telegram-send 'Timer ended'
+notify-send "Timer ended" && /usr/bin/telegram-send 'Timer ended' && paplay /home/zach/scripts/notification.wav

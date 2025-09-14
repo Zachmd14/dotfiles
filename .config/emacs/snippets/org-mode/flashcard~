@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: flashcard
+# key: card
+# --
+** Front
+$0
+** Back

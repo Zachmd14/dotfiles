@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: LaTeX overline
+# key: ol
+# --
+\overline{$1} $0

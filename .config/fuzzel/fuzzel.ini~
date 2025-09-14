@@ -1,0 +1,9 @@
+[main]
+font=Monospace:size=12
+dpi-aware=auto
+
+[colors]
+background=000000dd
+text=ffffffff
+selection=285577ff
+selection-text=ffffffff

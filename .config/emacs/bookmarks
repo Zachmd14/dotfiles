@@ -1,0 +1,11 @@
+;;;; Emacs Bookmark Format Version 1;;;; -*- coding: utf-8-emacs; mode: lisp-data -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("org-capture-last-stored"
+ (filename . "~/Documents/Emacs/org-roam/20250914153015-bullet_journalling_method.org")
+ (front-context-string . "\n#+begin_definit")
+ (rear-context-string . "rnalling Method\n")
+ (position . 103)
+ (last-modified 26822 50790 996944 935000))
+)

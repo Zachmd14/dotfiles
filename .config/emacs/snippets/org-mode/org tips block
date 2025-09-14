@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: org tips block
+# key: tp
+# --
+#+begin_tips
+$0
+#+end_tips

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: LaTeX block
+# key: mk
+# --
+\[
+$0
+\]

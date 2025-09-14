@@ -78,6 +78,6 @@ fi
     echo "Reminder scheduled for $REMINDER_TIME_DESC: \"$MESSAGE\""
     sleep $SECONDS_UNTIL
     notify-send "Reminder" "$MESSAGE" && 
-        /home/zach/.local/share/pipx/venvs/telegram-send/bin/telegram-send "Arch Reminder: $MESSAGE" && 
+        /usr/bin/telegram-send "Arch Reminder: $MESSAGE" && 
         paplay /home/zach/scripts/notification.wav
 } &> /dev/null &

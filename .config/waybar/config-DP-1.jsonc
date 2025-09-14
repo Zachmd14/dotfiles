@@ -1,4 +1,3 @@
-
 {
 	  "output": "DP-1",
     "layer": "top",
@@ -22,8 +21,8 @@
       //"disk#ssd",
       // "mpris",
       // "custom/weather",
+      "cpu",
       "network",
-      //"cpu",
       //"memory",
       "battery",
       "pulseaudio"
@@ -80,7 +79,7 @@
     },
     "cpu": {
         "interval": 3,
-        "format": "{usage}% ",
+        "format": "[CPU: {usage}%]",
         "on-click": "kitty --app-id htop htop",
     },
     "memory": {

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: LaTeX box
+# key: bx
+# --
+\boxed{$0}

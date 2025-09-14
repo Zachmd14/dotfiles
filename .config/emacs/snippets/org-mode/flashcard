@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: flashcard
+# key: card
+# --
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_DECK: $0
+:END:
+** Front
+
+** Back

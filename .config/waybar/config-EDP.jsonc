@@ -1,5 +1,5 @@
 {
-	  "output": "eDP-1",
+    "output": "eDP-1",
     "layer": "top",
     "position": "top",
     "height": 20,
@@ -21,8 +21,8 @@
       //"disk#ssd",
       // "mpris",
       // "custom/weather",
+      "cpu",
       "network",
-      //"cpu",
       //"memory",
       "battery",
       "pulseaudio"
@@ -79,7 +79,7 @@
     },
     "cpu": {
         "interval": 3,
-        "format": "{usage}% ",
+        "format": "[CPU: {usage}%]",
         "on-click": "kitty --app-id htop htop",
     },
     "memory": {
