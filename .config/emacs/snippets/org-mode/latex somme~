@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: LaTeX somme
+# key: sgm
+# --
+\[
+\sum_{$0}^{}
+\]

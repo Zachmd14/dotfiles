@@ -1,2 +1,4 @@
 ;;; -*- lisp-data -*-
-(("/home/zach/.config/emacs/elpa/anki-helper/"))
+(("/home/zach/.config/emacs/elpa/reader/")
+ ("/home/zach/Documents/Emacs/org-roam/")
+ ("/home/zach/.config/emacs/elpa/anki-helper/"))

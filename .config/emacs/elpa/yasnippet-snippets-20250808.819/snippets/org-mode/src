@@ -3,5 +3,5 @@
 # key: <src
 # --
 #+begin_src $1
-  $0
+  $2
 #+end_src

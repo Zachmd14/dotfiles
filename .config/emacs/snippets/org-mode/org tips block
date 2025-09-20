@@ -2,6 +2,6 @@
 # name: org tips block
 # key: tp
 # --
-#+begin_tips
+#+BEGIN_TIPS
 $0
-#+end_tips
+#+END_TIPS

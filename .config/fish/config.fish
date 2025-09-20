@@ -9,6 +9,7 @@ export FZF_DEFAULT_OPTS="--height=90% --layout=reverse --info=inline --border --
 
 export PIPEWIRE_LATENCY="128/48000"  # Adjust buffer size if needed
 export JACK_NO_AUDIO_RESERVATION=1    # Prevents JACK from hogging audio
+set -x DEEPSEEK_API_KEY "sk-104e63eab49b48aea0840bc2990be07d"
 
 # Bob the fish config
 set -g theme_color_scheme dark
@@ -28,8 +29,6 @@ set -Ux fish_user_paths $HOME/.config/emacs/bin $fish_user_paths
 
 
 # terminal startup commands
-# fastfetch --logo-type none
-# todoist-cli --color --indent l --filter today
 
 # If not running interactively, don't do anything
 if status is-interactive
@@ -48,6 +47,14 @@ if status is-interactive
 		set -gx PROTON "/usr/share/steam/compatibilitytools.d/proton_tkg_makepkg/proton"
 
     # Aliases
+    abbr ors 'rclone sync --filter-from ~/.rclone-org-roam-filter /home/zach/Documents/Emacs/org-roam/ org-roam-webdav:org-roam-webdav/'
+    abbr tdca 'tod l c -t todoist --project'
+    abbr tdl 'tod l v -t todoist --project'
+    abbr tdla 'tod l v -t todoist --filter all'
+    abbr tdc 'tod l c --filter today'
+    abbr tdt 'tod t c'
+    abbr tdd 'tod list view -t todoist -f today'
+    abbr td 'tod'
     abbr grep 'grep --color=auto'
     abbr shutit 'shutdown -h 0'
     abbr lq 'exa --icons --group-directories-first --sort=extension'
@@ -81,8 +88,6 @@ if status is-interactive
     abbr bt 'bluetuith'
     abbr cal 'gcalcli'
     abbr mvn-new 'mvn archetype:generate -DgroupId=com.example -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false -DartifactId='
-    abbr td 'todoist-cli --color --indent'
-    abbr tdday 'todoist-cli --color --indent l --filter today'
     abbr fastfetch 'fastfetch --logo-type none'
     # abbr config '/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
     abbr gpom 'git push origin main'
@@ -118,15 +123,6 @@ if status is-interactive
     abbr ableton 'wine start /unix "/home/zach/.wine/dosdevices/c:/ProgramData/Ableton/Live 11 Suite/Program/Ableton Live 11 Suite.exe"'
     abbr orb 'bash /home/zach/scripts/org-roam-backup.sh '
 end
-
-function fish_user_key_bindings
-    bind tt peco_todoist_item
-    bind tp peco_todoist_project
-    bind tl peco_todoist_labels
-    bind tc peco_todoist_close
-    bind td peco_todoist_delete
-end
-
 
 
 # =============================================================================
@@ -237,3 +233,21 @@ alias cdi=__zoxide_zi
 
 
 thefuck --alias | source
+# Print an optspec for argparse to handle cmd's options that are independent of any subcommand.
+function __fish_tod_global_optspecs
+	string join \n v/verbose c/config= t/timeout= h/help V/version
+end
+
+function __fish_tod_needs_command
+	# Figure out if the current invocation already has a command.
+	set -l cmd (commandline -opc)
+	set -e cmd[1]
+	argparse -s (__fish_tod_global_optspecs) -- $cmd 2>/dev/null
+	or return
+	if set -q argv[1]
+		# Also print the command, so this can be used to figure out what it is.
+		echo $argv[1]
+		return 1
+	end
+	return 0
+end

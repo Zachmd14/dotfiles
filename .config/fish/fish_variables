@@ -4,6 +4,7 @@ SETUVAR --export FZF_DEFAULT_OPTS:\x2d\x2dheight\x3d10\x25\x20\x2d\x2dlayout\x3d
 SETUVAR THEME_EDEN_PROMPT_CHAR:\u00bb
 SETUVAR VIRTUAL_ENV_DISABLE_PROMPT:true
 SETUVAR __fish_initialized:3800
+SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR _tide_left_items:os\x1epwd\x1egit\x1enewline\x1echaracter
 SETUVAR _tide_right_items:status\x1ecmd_duration\x1econtext\x1ejobs\x1enode\x1epython\x1erustc\x1ejava\x1eruby\x1ego\x1etime
 SETUVAR fish_color_autosuggestion:brblack

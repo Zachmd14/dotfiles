@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: HTML skeleton
+# key: skelet
+# --
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+<body>
+
+  $0
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+#s(lsp-session ("/home/zach/Documents/cours/informatique/linux/scripts" "/home/zach/tempo" "/home/zach/Documents/cours/informatique/webdev/tp3/ex2" "/home/zach/Documents/cours/informatique/webdev/tp3/ex1" "/home/zach/Documents/cours/informatique/webdev/TP1") nil #s(hash-table test equal) #s(hash-table test equal) #s(hash-table test equal))

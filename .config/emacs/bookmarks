@@ -3,9 +3,9 @@
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored"
- (filename . "~/Documents/Emacs/org-roam/20250914153015-bullet_journalling_method.org")
- (front-context-string . "\n#+begin_definit")
- (rear-context-string . "rnalling Method\n")
- (position . 103)
- (last-modified 26822 50790 996944 935000))
+ (filename . "~/Documents/Emacs/org-roam/20250919133119-interaction_utilisateurs_bash.org")
+ (front-context-string)
+ (rear-context-string . "ilisateurs bash\n")
+ (position . 107)
+ (last-modified 26829 16138 569017 79000))
 )
